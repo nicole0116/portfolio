@@ -1,0 +1,388 @@
+/* body{
+  font-family: 'PT Sans', sans-serif;
+  display: table;
+  width: 100%;
+  background: #f54785;
+} */
+.contain_text {
+   color: rgb(241, 241, 241);
+}
+
+
+
+.ofer_container {
+    text-align: center;
+    max-width: 1200px;
+}
+
+button {
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+    width: 100%;
+    height: 250px;
+    padding: 1%;
+
+}
+
+
+button:active {
+
+    outline: none;
+}
+
+button:focus {
+
+    outline: none;
+}
+
+a:focus {
+    color: #000;
+    outline: none;
+}
+
+
+a:focus {
+    color: #000;
+    background: olive;
+}
+
+
+
+button>span {
+    display: block;
+    padding: 5% 5%;
+    /* font-family: "微軟正黑體","Helvetica", "Arial","LiHei Pro", sans-serif; */
+}
+
+button::before,
+button::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+
+
+}
+
+button>span::before,
+button>span::after {
+    content: "";
+    width: 1px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+.btn1_bg:hover button::before,
+.btn1_bg:hover button::after {
+    width: 100%;
+}
+
+.btn1_bg:hover button span::before,
+.btn1_bg:hover button span::after {
+    height: 100%;
+}
+
+
+
+.btn2_bg:hover button::before,
+.btn2_bg:hover button::after {
+    width: 100%;
+}
+
+.btn2_bg:hover button span::before,
+.btn2_bg:hover button span::after {
+    height: 100%;
+}
+
+
+.btn3_bg:hover button::before,
+.btn3_bg:hover button::after {
+    width: 100%;
+}
+
+.btn3_bg:hover button span::before,
+.btn3_bg:hover button span::after {
+    height: 100%;
+}
+
+
+
+.btn4_bg:hover button::before,
+.btn4_bg:hover button::after {
+    width: 100%;
+}
+
+.btn4_bg:hover button span::before,
+.btn4_bg:hover button span::after {
+    height: 100%;
+}
+
+.btn5_bg:hover button::before,
+.btn5_bg:hover button::after {
+    width: 100%;
+}
+
+.btn5_bg:hover button span::before,
+.btn5_bg:hover button span::after {
+    height: 100%;
+}
+
+.btn6_bg:hover button::before,
+.btn6_bg:hover button::after {
+    width: 100%;
+}
+
+.btn6_bg:hover button span::before,
+.btn6_bg:hover button span::after {
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*----- button 4 -----*/
+.btn-4::after {
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+.btn-4 span::after {
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+.btn-4::before {
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+
+.btn-4 span::before {
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+.new_bg {
+
+    padding: 1%;
+}
+
+
+
+.new_bg:hover {
+    background: rgba(31, 30, 30, 0.7);
+   
+}
+
+
+.btn1_bg {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../images/new_3.jpg);
+    background-size: cover;
+    margin:1%;
+    cursor: pointer;
+    width: 30%;
+    background-position: 50% 50%;
+}
+
+
+.btn1_bg:hover button,
+.btn1_bg:hover {
+    opacity: 10;
+    box-shadow: 0px 0px 0px 1px rgba(78, 73, 71, 0.17);
+}
+
+.btn2_bg {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../images/new_2.jpg);
+    background-size: cover;
+    margin:1%;
+    cursor: pointer;
+    width: 30%;
+    background-position: 50% 50%;
+
+}
+
+
+.btn2_bg:hover button,
+.btn2_bg:hover {
+    opacity: 10;
+    box-shadow: 0px 0px 0px 1px rgba(78, 73, 71, 0.17);
+}
+
+.btn3_bg {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../images/new_1.jpg);
+    background-size: cover;
+    margin:1%;
+    cursor: pointer;
+    width: 30%;
+    background-position: 50% 50%;
+
+}
+
+
+.btn3_bg:hover button,
+.btn3_bg:hover {
+    opacity: 10;
+    box-shadow: 0px 0px 0px 1px rgba(78, 73, 71, 0.17);
+}
+
+.btn4_bg {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../images/new_3.jpg);
+    background-size: cover;
+    margin:1%;
+    cursor: pointer;
+    width: 30%;
+    background-position: 50% 50%;
+}
+
+
+.btn4_bg:hover button,
+.btn4_bg:hover {
+    opacity: 10;
+    box-shadow: 0px 0px 0px 1px rgba(78, 73, 71, 0.17);
+}
+
+.btn5_bg {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../images/new_2.jpg);
+    background-size: cover;
+    margin:1%;
+    cursor: pointer;
+    width: 30%;
+    background-position: 50% 50%;
+
+}
+
+
+.btn5_bg:hover button,
+.btn5_bg:hover {
+    opacity: 10;
+    box-shadow: 0px 0px 0px 1px rgba(78, 73, 71, 0.17);
+}
+
+.btn6_bg {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../images/new_1.jpg);
+    background-size: cover;
+    margin:1%;
+    cursor: pointer;
+    width: 30%;
+    background-position: 50% 50%;
+ 
+
+}
+
+
+.btn6_bg:hover button,
+.btn6_bg:hover {
+    opacity: 10;
+    box-shadow: 0px 0px 0px 1px rgba(78, 73, 71, 0.17);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px) {
+
+    .ofer_container {
+        max-width: 100%;
+    }
+
+    .btn1_bg {
+        width: 47%;
+    }
+
+    .btn2_bg {
+        width: 47%;
+    }
+
+    .btn3_bg {
+        width: 47%;
+    }
+
+    .btn4_bg {
+        width: 47%;
+    }
+
+    .btn5_bg {
+        width: 47%;
+    }
+
+    .btn6_bg {
+        width: 47%;
+    }
+
+}
+
+
+
+@media(max-width:576px) {
+
+ 
+
+    .btn1_bg {
+        width: 100%;
+    }
+
+    .btn2_bg {
+        width: 100%;
+    }
+
+    .btn3_bg {
+        width: 100%;
+    }
+
+    .btn4_bg {
+        width: 100%;
+    }
+
+    .btn5_bg {
+        width: 100%;
+    }
+
+    .btn6_bg {
+        width: 100%;
+    }
+
+}

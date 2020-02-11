@@ -1,0 +1,875 @@
+.open_all{
+    position: relative;
+
+}
+.open_bk{
+    visibility: hidden;
+    padding-top: 25%;
+}
+
+
+.container-flex {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: none;
+}
+
+
+.open {
+    margin: 4% 0 10%;
+    background: linear-gradient(0deg, rgba(129, 81, 21, 0)0%, rgba(255, 250, 242, 0.69)100%);
+    /* background-color: hsla(40, 14%, 91%, 0.9); */
+    position: relative;
+
+}
+
+
+/* .open::before {
+    content: "";
+    width: 80%;
+    padding-top: 80%;
+    background: linear-gradient(317deg, rgba(129, 81, 21, 0)34%, rgba(218, 206, 187, 0.808)100%);
+    position: absolute;
+    z-index: -55;
+    top: -22px;
+    left: -80px;
+}
+ */
+
+
+/* .open::before {
+    content: "";
+    width: 80%;
+    padding-top: 80%;
+    background-color: #d8cdb5ab;
+    position: absolute;
+    z-index: -55;
+    top: -40px;
+    left: -80px;
+} */
+/* .open::after {
+    content: "";
+    width: 50%;
+    padding-top: 50%;
+    background-color: #cab488ab;
+    position: absolute;
+    z-index: -55;
+    bottom: -50px;
+    right: -20px;
+} */
+
+.food_title {
+    text-align: center;
+    display: block;
+    padding: 2%;
+}
+
+
+.food_title>h5 {
+    margin: 2% 0;
+    position: relative;
+    font-size: 1.6rem;
+    color: #555;
+}
+
+/* 
+ .food_title>h5::before {
+    content: "";
+    width: 40%;
+    border: 1px solid #a8a8a842;
+    position: absolute;
+    top: 23px;
+    left: 0;
+}
+
+.food_title>h5::after {
+    content: "";
+    width: 40%;
+    border: 1px solid #a8a8a842;
+    position: absolute;
+    top: 23px;
+    right: 0;
+}  */
+
+.list_order {
+    order: 1
+}
+
+.list_order2 {
+    order: 2
+}
+
+
+
+
+
+
+
+.munu_ul {
+    width: 90%;
+    margin: 1% auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    vertical-align: middle;
+    /* border: 1px solid blue; */
+}
+
+/* .munu_ul>li p {
+    margin-top: 20%;
+} */
+
+li.m_line {
+    color: #706c69;
+    font-size: 1px;
+    /* vertical-align: middle; */
+    line-height: 6;
+}
+
+.m_b {
+    cursor: pointer;
+    display: block;
+}
+
+.m_b>a {
+
+    display: block;
+    color: #555;
+}
+
+.mb1 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/coffee-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(1):hover .mb1 {
+
+    background-image: url('../images/menu_bt/coffee-2.png');
+
+}
+
+.mb2 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/tea-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+
+}
+
+.m_b:nth-child(3):hover .mb2 {
+
+    background-image: url('../images/menu_bt/tea-2.png');
+
+}
+
+.mb3 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/juice-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(5):hover .mb3 {
+    background-image: url('../images/menu_bt/juice-2.png');
+
+}
+
+
+.mb4 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/slush-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(7):hover .mb4 {
+    background-image: url('../images/menu_bt/slush-2.png');
+
+}
+
+.mb5 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/pasta-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(9):hover .mb5 {
+    background-image: url('../images/menu_bt/pasta-2.png');
+
+}
+
+
+.mb6 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/risotto-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(11):hover .mb6 {
+    background-image: url('../images/menu_bt/risotto-2.png');
+
+}
+
+
+.mb7 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/side-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(13):hover .mb7 {
+    background-image: url('../images/menu_bt/side-2.png');
+
+}
+
+
+
+.mb8 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('../images/menu_bt/dessert-1.png');
+    display: block;
+    cursor: pointer;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.m_b:nth-child(15):hover .mb8 {
+    background-image: url('../images/menu_bt/dessert-2.png');
+
+}
+
+.mb1_pic2 {
+    width: 47%;
+    display: inline-block;
+    text-align: center;
+    padding: 1%;
+}
+
+.mb1_pic1 img,
+.mb1_pic2 img {
+    width: 100%;
+}
+
+
+.mb1_pic1 {
+    margin: 0 auto;
+    width: 96%;
+    /* border: 1px solid blue; */
+
+}
+
+
+.list_pic {
+    width: 50%;
+    text-align: center;
+    /* border:1px solid red; */
+}
+
+.list_flex_lg {
+    display: block;
+}
+
+.list_flex_sm {
+    display: none;
+}
+#open1,
+#open2,
+#open3,
+#open4,
+#open5,
+#open6,
+#open7,
+#open8 {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    opacity: 0; 
+    transition: all 1s linear;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+
+.mb1 p,
+.mb2 p,
+.mb3 p,
+.mb4 p,
+.mb5 p,
+.mb6 p,
+.mb7 p,
+.mb8 p {
+    line-height: 115px;
+    color: #706c69;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------ 50種咖啡豆 ------------------*/
+
+.coffee_food {
+    width: 100%;
+    height: 120px;
+    background-size: contain;
+
+    background-size: 100%;
+    text-align: center;
+    line-height: 120px;
+    background-color: rgb(56, 55, 52);
+
+}
+
+.coffee_beans p {
+
+    line-height: 280px;
+    text-align: center;
+    color: hsla(44, 28%, 87%, 0.8);
+    text-shadow: 2px 2px 8px black;
+}
+
+
+/* ------------------ 強推區 ------------------*/
+
+
+.food_suggest_one {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -50px -200px;
+    min-height: 500px;
+    /* background-attachment: fixed; */
+    background-image: url(../images/foos-sugges1.jpg);
+
+}
+
+.food_suggest_two {
+    width: 50%;
+
+    background-size: contain;
+    background-attachment: fixed;
+    background-image: url(../images/foos-sugges3.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50% 0;
+
+}
+
+
+.food_suggest {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.food_suggest_right {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5% 2%;
+}
+
+
+.food_suggest_left {
+    width: 40%;
+    position: relative;
+    top: 50px;
+    left: 0px;
+}
+
+/* .food_suggest_content{
+
+} */
+
+.list_flex {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+}
+
+
+.list_c {
+    width: 48%;
+}
+
+
+
+
+
+ul.menu_list {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+ul.menu_list>li {
+    padding: 1rem;
+    border-bottom: 1px dashed #211e1c;
+}
+
+
+
+ul.menu_list>li span {
+    color: #d4a037;
+    float: right;
+    width: 95px;
+    font-weight: 500;
+}
+
+ul.menu_list>li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+/* ------------------ 其餘菜單 ------------------*/
+
+
+
+.coffee_menu {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_1.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.coffee_menu2 {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_2.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.coffee_menu3 {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_3.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.coffee_menu4 {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_4.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.menu_bt_content {
+    width: 1200px;
+    margin: 0 auto;
+
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.coffee_menu_width {
+    width: 500px;
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.menu_bt_content .menu_bt {
+    display: inline-block;
+    width: 8%;
+}
+
+.menu_bt_content .menu_bt a {
+    color: #d3cfc5;
+    transition: all .5s;
+    text-decoration: none;
+    font-family: "微軟正黑體", "Helvetica", "Arial", "LiHei Pro", sans-serif;
+    letter-spacing: 3px;
+}
+
+
+.menu_bt_content .menu_bt a:hover {
+    color: #e8be6a;
+}
+
+#div_coffee_list {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+
+
+
+
+ul.menu_list_other>li {
+
+    border-bottom: 1px dashed #706c69;
+    list-style: none;
+    font-family: "微軟正黑體", "Helvetica", "Arial", "LiHei Pro", sans-serif;
+    letter-spacing: 3px;
+    padding: 20px;
+
+}
+
+
+
+ul.menu_list_other>li span {
+    color: #e9cd9e;
+    float: right;
+    width: 95px;
+}
+
+ul.menu_list_other>li:last-child {
+    border-bottom: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scene {
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.container .scene {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+.scene {
+    min-height: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.scene,
+.layer {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.layer {
+    position: absolute;
+}
+
+/* .fourthplan{
+background: url("http://guillaume-briand.fr/wp-content/uploads/2016/02/s1HBbwG.jpg") no-repeat 50% 100%;
+background-size: cover;
+position: absolute;
+bottom: 96px;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 0px;
+} */
+/* 
+.thirdplan {
+background: url("http://guillaume-briand.fr/wp-content/uploads/2016/02/lBQEdbs.png") no-repeat 50% 100%;
+background-position: center center;
+background-size: cover;
+position: absolute;
+width: 115%;
+height: 115%;
+left: -7%;
+top: -5%;
+z-index: -9999;
+} */
+/* 
+.secondplan {
+background: url("http://guillaume-briand.fr/wp-content/uploads/2016/02/kmyi66U.png");
+background-position: center center;
+position: absolute;
+width: 115%;
+height: 115%;
+left: -7.5%;
+top: -2%;
+z-index: -9999;
+} */
+
+.firstplan {
+    /* background: url("http://guillaume-briand.fr/wp-content/uploads/2016/02/nElvu4i.png"); */
+
+    background: url("../images/nElvu4i.png") no-repeat;
+
+
+
+    background-position: center center;
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -10%;
+    top: -10%;
+    z-index: -9999;
+}
+
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+    .open_all{
+        position: relative;
+   
+    }
+    
+.container .scene {
+    display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .munu_list {
+        overflow-y: hidden;
+    }
+
+    .munu_ul {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        vertical-align: middle;
+
+
+        /* border: 1px solid blue; */
+    }
+
+
+
+
+    .container-flex {
+        flex-direction: column;
+    }
+
+    .food_suggest_one {
+        width: 100%;
+
+
+        display: block;
+    }
+
+
+
+
+    .food_suggest_right {
+        width: 92%;
+        display: block;
+        margin: 0 4%;
+    }
+
+
+
+    ul.menu_list>li {
+        padding: .6rem;
+        border-bottom: 1px dashed #211e1c;
+    }
+
+
+}
+
+
+@media (max-width:576px) {
+    .munu_ul {
+        width: 140%;
+
+    }
+
+    .list_pic {
+        width: 100%;
+        text-align: center;
+    }
+
+    .list_flex {
+        width: 96%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .list_pic_d {
+        display: none;
+    }
+
+    .list_pic_open {
+        display: block;
+    }
+
+    .list_flex_lg {
+        display: none;
+    }
+
+    .list_flex_sm {
+        display: block;
+    }
+
+    .list_order {
+        order: 2
+    }
+
+    .list_order2 {
+        order: 1
+    }
+
+    .list_c {
+        width: 100%;
+    }
+
+    ul.menu_list>li {
+        padding: .8rem;
+        border-bottom: 1px dashed #211e1c;
+    }
+
+    .open_bk{
+        visibility: hidden;
+        padding-top: 30%;
+    }
+    
+}

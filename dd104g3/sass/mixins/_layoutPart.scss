@@ -1,0 +1,21 @@
+@mixin card($width: auto, $height: auto, $header: true, $color: $primary) {
+  width: $width;
+  height: $height;
+  border-radius: $borderRadius;
+  box-shadow: 1px 1px 3px $shadow;
+  overflow: hidden;
+  @if ($header) {
+    > .card_header {
+      width: 100%;
+      height: $headerHeight;
+      background-color: $color;
+      color: $white;
+      @include font(3, $headerHeight);
+      text-align: center;
+    }
+  }
+  > .card_content {
+    width: 100%;
+    padding: 20px;
+  }
+}

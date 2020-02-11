@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Noto+Sans+TC:400,500&display=swap"
+    rel="stylesheet" />
+  <link rel=icon href=favicon.ico>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="./css/owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owlcarousel/owl.theme.default.css">
+
+  <title>職人口袋 | 商城</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="threeJs"></div>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <a href="./home.html">
+            <img src="./img/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="nav_hamburger">
+          <div class="navBtn">
+            <div class="navBtn_btn">
+              <p>MENU</p>
+              <div>
+                <span />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav_bar">
+        <div class="logo">
+          <a href="./home.html">
+            <img src="./img/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <ul class="nav_list">
+          <li data-name="program">
+            <a href="./program.html">
+              <div>
+                <img src="./img/staff-poket.svg" alt="pm" />
+              </div>
+              <p>專案管理<br /><span>Project management</span></p>
+            </a>
+          </li>
+          <li data-name="tomato">
+            <a href="./tomato.html">
+              <div>
+                <img src="./img/time-left.d4d509fa.svg" alt="clock" />
+              </div>
+              <p>番茄鐘<br /><span>Clock</span></p>
+            </a>
+          </li>
+          <li data-name="mall">
+            <a href="./mall.html">
+              <div>
+                <img src="./img/shopping-bag.c63fa553.svg" alt="shop" />
+              </div>
+              <p>商城<br /><span>Shop</span></p>
+            </a>
+          </li>
+        </ul>
+        <div class="user_status">
+          <div class="user_shot">
+            <div>
+              <img src="./img/user.9c173fc0.svg" alt="member" id="user_shot"/>
+            </div>
+            <p id="mem_id">尚未登入</p>
+          </div>
+          <div class="status">
+            <div id="login">
+              <div>
+                <a href="./member.html">會員中心</a>
+              </div>
+              <div id="mem_logout">登出</div>
+            </div>
+            <div id="logout">
+              <a href="./member_login.html">登入</a>
+            </div>
+          </div>
+        </div>
+        <div class="page_info">
+
+          <!-- <div class="search_bar">
+            <label>
+              <img src="./img/icon/search.svg" alt="search" />
+              <input type="text" placeholder="Search Somethings.." />
+            </label>
+          </div> -->
+          <div class="title">
+            <p>商品分類</p>
+          </div>
+          <form action="">
+            <ul class="page_info_list setting_shop">
+              <!-- <li id="mall_btn01">
+                <button name="product_type" type="button" id="product_type" value="1" class="mall_btn">
+                  公事包
+              </button> -->
+              <li id="mall_btn01" data-type="1">
+                <p>公事包</p >
+              </li>
+              </li>
+              <li id="mall_btn02" data-type="2">
+                <p>識別證</p>
+              </li>
+              <li id="mall_btn03" data-type="3">  
+                <p>其它配件</p>
+              </li>
+            </ul>
+          </form>
+
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="content">
+        <div class="mall_content" id="mall_content">
+          <div class="mall_content_right">
+         
+            <div class="cart_bg" >
+              <a href="./cart.html"> 
+                <img src="./img/icon/shopping-cart_on_gray.svg" alt="">
+                <div class="mall_cart_cir">0</div>
+              </a>
+            </div>
+            <div class="mall_poduct_cart">
+              <div class="mall_poduct_content">
+                <div class="product_img">
+                  <div class="big_pic">
+                    <img class="b_img" src="" alt="">
+                  </div>
+                </div>
+
+                <div class="product_text">
+                  <p id="product_name"></p>
+                  <ul class="product_features">
+                    <li class="product_features_text1">
+
+                    </li>
+                    <!-- <li class="product_features_text1">絨毛內裡 保護電腦不刮傷</li> -->
+                    <!-- <li class="product_features_text2">凹形邊緣護墊 有效吸收抵禦衝擊</li> -->
+                  </ul>
+
+
+                  <div class="price_btn">
+                    <div class="product_price">
+                      <span>$</span><span class="price_sale" id="product_price"></span>
+                    </div>
+                    <div class="mall_bBtn_all" id="mall_bBtn_all">
+                      <select name="mall_color" id="mall_color">
+                        <!-- <option value="101_black">典雅黑</option>
+                        <option value="101_brown">駝棕色</option>
+                        <option value="101_blue">孔雀藍</option>
+                        <option value="101_white">白米色</option> -->
+                      </select>
+
+                      <select name="mall_amount" id="mall_amount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+
+                      <button class="mall_bBtn" value="Submit">加入購物車</button>
+
+                    </div>
+                  </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- 輪播  -->
+            <div class="slider-bg">
+              <h2>其它商品</h2>
+              <section id="slider">
+                <div class="custom1 owl-carousel owl-theme">
+                  <div class="item">
+                    <a href="#" class="item_list">
+                      <h4><img src="#" alt="" class="owl_img"></h4>
+                      <p></p><!-- ./img/mall_img/101_sbg.jpg -->
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="item_list">
+                      <h4><img src="#" alt="" class="owl_img"></h4>
+                      <p></p>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="item_list">
+                      <h4><img src="#" alt="" class="owl_img"></h4>
+                      <p></p>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="item_list">
+                      <h4><img src="#" alt="" class="owl_img"></h4>
+                      <p></p>
+                    </a>
+                  </div>
+
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./js/lib/three.min.js"></script>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+    uniform vec3 color;
+        uniform sampler2D texture;
+        varying float opacity;
+        varying vec3 vColor;
+        void main() {
+            gl_FragColor = vec4(vColor * color, 1);
+            gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+        }
+    </script>
+
+    <script src="./js/lib/particle.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/layout.js"></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script> -->
+  <!--Mall商城主要js-->
+  <script src="./js/mall.js"></script>
+  <script src="./js/mallstorage.js"></script>
+  <!--貓頭鷹跑馬燈的JS-->
+  <script src="./js/owlcarousel/owl.carousel.min.js"></script>
+  <script src="./js/owlcarousel/jquery.min.js"></script>
+
+
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script> -->
+  <!-- 放大鏡 -->
+  <!-- <script>
+    $(".big_pic img").blowup({
+      background: "#FCEBB6"
+    });
+  </script> -->
+
+  <!-- niceSelect下拉選單 -->
+  <!-- <script src="./js/nice_select/jquery.js"></script>
+  <script src="./js/nice_select/jquery.nice-select.js"></script> -->
+
+</body>
+
+</html>

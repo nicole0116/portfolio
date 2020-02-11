@@ -1,0 +1,239 @@
+/* ------------------關於我們 ------------------*/
+
+.about_section {
+    margin: 140px auto;
+    width: 1200px;
+    position: relative;
+}
+
+
+.about_contain {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10%;
+
+}
+
+.about_text {
+    width: 45%;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about_box {
+    width: 100%;
+    height: 400px;
+    display: block;
+    background-color: #eceae6;
+    position: relative;
+
+
+}
+
+.about_pic1 {
+    position: absolute;
+    margin-top: -80px;
+    left: 8%;
+
+}
+
+.about_pic1 img {
+    width: 320px;
+}
+
+.about_pic2 {
+    position: absolute;
+
+    top: 60px;
+    left: 210px;
+}
+
+.about_pic2 img {
+    width: 320px;
+}
+
+/* ------------------ 50種咖啡豆 ------------------*/
+
+.coffee_beans {
+    width: 100%;
+    background-size: contain;
+    height: 280px;
+    background-attachment: fixed;
+    background-image: url(../images/index_beans.jpg);
+    background-size: 100%;
+
+}
+
+.coffee_beans p {
+    font: 30px / 60px "msunghk";
+    line-height: 280px;
+    text-align: center;
+    color: hsla(44, 28%, 87%, 0.8);
+    text-shadow: 2px 2px 8px black;
+}
+
+
+.coffee_surroundings {
+    width: 100%;
+    background-size: contain;
+    height: 280px;
+    background-attachment: fixed;
+    background-image: url(../images/index_surroundings.jpg);
+    background-size: 100%;
+}
+
+/* ------------------ 展覽資訊(燈箱) ------------------*/
+
+.black_background {
+    background-color: #211e1c;
+    width: 100%;
+    padding: 140px 0;
+    position: relative;
+}
+
+.performances_section {
+    width: 1200px;
+    margin: 100px auto 0px;
+}
+
+/* .left_icon {
+    background-image: url(../images/preview_left.png);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    opacity: 0.5;
+}
+
+.right_icon {
+    background-image: url(../images/preview_right.png);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    opacity: 0.5;
+} */
+
+.light_box {
+    width: 355px;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.light_pic {
+    margin-bottom: 20px;
+}
+
+.light_pic img {
+    width: 100%;
+}
+
+.light_text {
+    font: 30px / 60px "msunghk";
+    line-height: 280px;
+    text-align: center;
+    color: hsla(44, 28%, 87%, 0.8);
+    text-shadow: 2px 2px 8px black;
+}
+
+
+/* ------------------ 沉澱心靈 ------------------*/
+
+.performances_title {
+    height: 200px;
+    position: absolute;
+    vertical-align: top;
+    color: #ded4cd;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+/* ------------------ 優惠訊息 ------------------*/
+
+.offer_section {
+    margin: 140px auto;
+    width: 1200px;
+}
+
+.offer_text {
+    width: 45%;
+    height: 200px;
+    display: inline-block;
+}
+
+.offer_contain {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+
+
+
+
+
+
+/* 會動的咖啡豆 */
+
+.beat_animation1 { 
+    position: absolute;
+    right:10px;
+    top:620px;
+}
+
+.beat_animation1 img {
+    width: 90%;
+    animation: beat1 3s infinite;
+}
+
+
+@keyframes beat1 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+
+
+.beat_animation2 { 
+    position: absolute;
+    left:20px;
+    top:2050px;
+    z-index: 99;
+}
+
+.beat_animation2 img {
+    width: 28%;
+    animation: beat2 3s infinite;
+}
+
+
+@keyframes beat2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}

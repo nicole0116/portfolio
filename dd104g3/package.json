@@ -1,0 +1,26 @@
+{
+  "name": "dd104g3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannyway741006/dd104G3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannyway741006/dd104G3/issues"
+  },
+  "homepage": "https://github.com/dannyway741006/dd104G3#readme",
+  "dependencies": {
+    "bootstrap-switch": "^3.4.0",
+    "v-calendar": "^1.0.0-beta.23",
+    "vue-event-calendar": "^1.5.2",
+    "vue-loading-overlay": "^3.2.0",
+    "vue2-datepicker": "^3.3.0"
+  }
+}

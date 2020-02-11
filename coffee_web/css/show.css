@@ -1,0 +1,601 @@
+h5{
+    font-size: 1.6rem;
+}
+
+hr{
+    margin: 2% 0;
+}
+.t_black {
+    color: #555;
+    line-height: 1.75rem;
+}
+
+#closeDown i {
+    display: block;
+    float: right;
+    margin: -4% -4%;
+    background-color: #2c272f;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #e3dfd5;
+    border-radius: 2rem;
+
+}
+
+
+
+#outBox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 47, 47, 0.698);
+    visibility: hidden;
+    z-index: 20;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+}
+
+
+
+#insideBox {
+    width: 55%;
+    /* min-height: 85%; */
+    left: 50%;
+    top: 50%;
+    z-index: 999;
+    margin: 0 auto;
+    background-color: #e6e1d9fa;
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2%;
+    transition: all .5s linear;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.show_content_bg {
+    width: 100%;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    background-image: url(../images/show_bg2.jpg);
+    background-size: cover;
+  
+}
+
+.a_w a {
+    color: #dfdfdf;
+}
+
+.a_w a:hover {
+    color: #dfdfdf;
+}
+
+.a_w a:active {
+    color: #dfdfdf;
+}
+
+
+/* ------------------ 行事曆 ------------------*/
+main {
+    margin: 0 auto;
+    min-height: 670px;
+   
+}
+
+.calendar_box {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0px;
+    padding-top: 50px;
+    color: rgb(216, 207, 196);
+    
+    padding: 2% 0 5%;
+}
+
+.calendar_box>p {
+    color: rgb(241, 233, 223);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.calendar_box_td>span:nth-child(2) {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+
+.calendar_box>span {
+    color: rgb(241, 233, 223);
+    font-size: 16px;
+
+}
+
+
+.have_music {
+    background-color: hsla(41, 96%, 36%, 0.878);
+    cursor: pointer;
+}
+
+.have_music:hover {
+    background-color: hsla(41, 75%, 47%, 0.878);
+}
+
+
+
+/* #no_music {
+    background-color: hsla(0, 1%, 23%, 0.878);
+    filter: brightness(.7);
+} */
+
+
+.calendar_box .calendar_box_td {
+    width: 12.2%;
+    min-height: 100px;
+    outline: .05rem solid rgba(255, 199, 126, 0.5);
+    display: inline-block;
+    margin: 0;
+    padding: 1%;
+    font-size: 16px;
+    vertical-align: top;
+    text-align: left;
+
+}
+
+.calendar_box_content {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+.calendar_single {
+    position: relative;
+    padding: 30px 0;
+    width: 1140px;
+    margin: 0 auto;
+    /* border:1px solid #e8be6a; */
+}
+
+
+
+#calendar_1 {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+#calendar_1 .calendar_img {
+    /* width: 92%; */
+    min-height: 350px;
+    background-image: url("../images/m3.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto 1%;
+}
+
+
+.calendar_content {
+    text-align: left;
+    padding: 0 5%;
+}
+
+
+/* .calendar_content>p {
+    font-size: 16px;
+} */
+
+
+
+#calendar_2 {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+    text-align: center;
+}
+
+#calendar_2 .calendar_img {
+    width: 900px;
+    height: 400px;
+    background-image: url("../images/m.jpg");
+    background-position: 0px -10px;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+#calendar_3 {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+    text-align: center;
+}
+
+#calendar_3 .calendar_img {
+    width: 900px;
+    height: 400px;
+    background-image: url("../images/m3.jpg");
+    background-position: 0px -10px;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+
+
+
+.music_name {
+    display: block;
+}
+
+
+
+
+/* ------------------ 50種咖啡豆 ------------------*/
+
+.coffee_food {
+    width: 100%;
+    height: 120px;
+    background-size: contain;
+    /* background-image: url(../images/index_beans.jpg); */
+    background-size: 100%;
+    text-align: center;
+    line-height: 120px;
+    background-color: rgb(56, 55, 52);
+
+}
+
+.coffee_beans p {
+    font: 30px / 60px "msunghk";
+    line-height: 280px;
+    text-align: center;
+    color: hsla(44, 28%, 87%, 0.8);
+    text-shadow: 2px 2px 8px black;
+}
+
+
+/* ------------------ 強推區 ------------------*/
+
+
+.food_suggest_one {
+    width: 100%;
+    height: 80vh;
+    background-size: contain;
+    background-attachment: fixed;
+    background-image: url(../images/foos-sugges1.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 50% 100vh;
+}
+
+.food_suggest_two {
+    width: 100%;
+    height: 80vh;
+    background-size: contain;
+    background-attachment: fixed;
+    background-image: url(../images/foos-sugges3.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50% 100vh;
+}
+
+
+.food_suggest {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.food_suggest_right {
+    width: 40%;
+    position: relative;
+    top: 50px;
+    left: 660px;
+}
+
+
+.food_suggest_left {
+    width: 40%;
+    position: relative;
+    top: 50px;
+    left: 0px;
+}
+
+/* .food_suggest_content{
+
+} */
+
+
+
+
+ul.menu_list>li {
+    padding: 20px;
+    border-bottom: 1px dashed #211e1c;
+}
+
+
+
+ul.menu_list>li span {
+    color: #af8d51;
+    float: right;
+    width: 95px;
+}
+
+ul.menu_list>li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+/* ------------------ 其餘菜單 ------------------*/
+
+
+
+.coffee_menu {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_1.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.coffee_menu2 {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_2.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.coffee_menu3 {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_3.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.coffee_menu4 {
+    width: 100%;
+    background-size: contain;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(../images/food_menu_4.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.menu_bt_content {
+    width: 1200px;
+    margin: 0 auto;
+
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.coffee_menu_width {
+    width: 500px;
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.menu_bt_content .menu_bt {
+    display: inline-block;
+    width: 8%;
+}
+
+.menu_bt_content .menu_bt a {
+    color: #d3cfc5;
+    transition: all .5s;
+    text-decoration: none;
+    font-family: "微軟正黑體", "Helvetica", "Arial", "LiHei Pro", sans-serif;
+    letter-spacing: 3px;
+}
+
+
+.menu_bt_content .menu_bt a:hover {
+    color: #e8be6a;
+}
+
+#div_coffee_list {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+
+
+
+
+ul.menu_list_other>li {
+
+    border-bottom: 1px dashed #706c69;
+    list-style: none;
+    font-family: "微軟正黑體", "Helvetica", "Arial", "LiHei Pro", sans-serif;
+    letter-spacing: 3px;
+
+}
+
+
+
+ul.menu_list_other>li span {
+    color: #e9cd9e;
+    float: right;
+    width: 95px;
+}
+
+ul.menu_list_other>li:last-child {
+    border-bottom: none;
+
+}
+
+
+
+@media(max-width:768px) {
+
+    .calendar_box .calendar_box_td {
+
+        min-height: 85px;
+
+
+    }
+
+
+
+    #insideBox {
+        width: 80%;
+        /* min-height: 80%;
+        left: 50%;
+        top: 50%;
+        z-index: 999;
+        margin: 0 auto;
+        background-color: #e6e1d9;
+        visibility: hidden;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        text-align: center; */
+    }
+
+
+
+
+
+
+
+}
+
+
+@media(max-width:576px) {
+
+    .calendar_box .calendar_box_td {
+
+        min-height: 70px;
+
+
+    }
+
+
+    .music_name {
+        display: none;
+    }
+
+
+
+    .t_small {
+
+        display: block;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        margin: 0 0 2%;
+    }
+
+    #insideBox {
+        width: 92%;
+        padding: 2%;
+        /* min-height: 80%;
+        left: 50%;
+        top: 50%;
+        z-index: 999;
+        margin: 0 auto;
+        background-color: #e6e1d9;
+        visibility: hidden;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        text-align: center; */
+    }
+
+    main {
+        margin: 0 auto;
+        min-height: 0;
+
+    }
+
+
+    #calendar_1 .calendar_img {
+
+        min-height: 190px;
+    }
+
+
+
+
+}

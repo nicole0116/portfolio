@@ -1,0 +1,455 @@
+// @import "./pages/calendarbyHand";
+// @import "./pages/calendarbyHand";
+
+/*------------------------- */
+/*          商城頁面        */
+/*------------------------- */
+
+
+// .mall_btn{
+//     position: relative;
+//     height: 50px;
+//     background-color: #e07c01;
+//     width: 100%;
+//     text-align: left;
+//     outline-style: none;
+//     outline-width: 0px;
+//     border: none;
+//     border-style: none;
+//     text-shadow: none;
+//     -webkit-appearance: none;
+//     -webkit-user-select: text;
+//     outline-color: transparent;
+//     box-shadow: none;
+// }
+
+
+
+select {
+  color: $gray;
+  font-weight: 500;
+  padding: 5px 5px;
+  cursor: pointer;
+  outline: none;
+  margin: 5px 10px 0 0;
+}
+
+select::-ms-expand {
+  /* for IE 11 */
+  display: none;
+  outline: none;
+}
+
+option {
+  color: $gray;
+  font-weight: bold;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border: none;
+}
+
+option:hover {
+  outline: none;
+  border: none;
+}
+
+
+// option {color:#6666;font-weight:bold; padding:5px;}
+
+// option:hover {color:rgb(55, 55, 143)}
+
+// option {border:1px solid green}
+
+/* 單選框 */
+
+// .radio_style input[type="radio"] {
+//   display: none;
+
+// }
+
+// .radio_style input[type="radio"]+label {
+//   display: inline-block;
+//   cursor: pointer;
+//   padding: 5px 10px;
+//   border: 1px solid #e8e8e8;
+//   border-radius: 5px;
+//   background-color: #fff;
+//   height: 42px;
+//   vertical-align: middle;
+//   text-align: center;
+//   line-height:33px;
+//   clear: both;
+// }
+
+// .radio_style input[type="radio"]:checked+label {
+//   background-color: #fff;
+//   border-color:#999999;
+
+// }
+
+
+.content {
+  position: relative;
+}
+
+.mall_content {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/mall_img/101_bg.jpg);
+  background-size: cover;
+  vertical-align: auto;
+  line-height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .mall_content_right {
+    // border: 1px solid blue;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.85);
+    align-content: flex-start;
+    @include positionCenter(y);
+    align-content: space-around;
+    box-shadow: 1px 1px 20px rgba(129, 129, 129, 0.7);
+    // border-radius: 10px 0 0 10px;
+
+
+    .cart_bg {
+      position: absolute;
+      padding: 10px;
+      height: 50px;
+      top: 0;
+      right: 0;
+      margin: 10px 20px 0;
+
+      a {
+        display: block;
+        width:5%;
+
+        .mall_cart_cir {
+          background-color: $danger;
+          color: $white;
+          width: 18px;
+          height: 18px;
+          border-radius: 18px;
+          border: 2px solid $danger;
+          position: absolute;
+          top: 25px;
+          left: 30px;
+          text-align: center;
+          vertical-align: middle;
+          display: none;
+
+        }
+
+        >img {
+          cursor: pointer;
+          width: 30px;
+        }
+      }
+    }
+
+    .mall_poduct_cart {
+      //商品卡片
+      width: 100%;
+      margin: 25px auto 0;
+
+      .mall_poduct_content {
+        //卡片內容
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+
+        .product_img {
+          //商品圖
+          width: 50%;
+          padding: 10px;
+          // margin: 20px;
+          // border: 1px solid rgb(0, 255, 13);
+
+          .big_pic {
+            width: 100%;
+
+            .b_img {
+              width: 100%;
+            }
+          }
+        }
+
+        .product_text {
+          //商品文字
+          width: 50%;
+          padding: 40px 0;
+          // border: 1px solid red;
+
+          p {
+            @include font(4);
+          }
+          
+
+          ul.product_features {
+            margin: 20px 0 0 20px;
+
+            >li {
+              @include font(1);
+              color: $dark;
+              width: 100%;
+              list-style: none;
+              margin-left: -18px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//價格 按鈕
+.price_btn {
+  margin-top: 40px;
+
+  .product_price {
+    color: $price;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 20%;
+    margin-right: 30px;
+
+    .price_sale {
+      font-weight: bolder;
+      @include font(6);
+    }
+
+    span:nth-child(1) {
+      font-weight: bolder;
+    }
+
+    span:nth-child(2) {
+      margin-left: 5px;
+      font-weight: bolder;
+    }
+  }
+
+  .mall_bBtn_all {
+    // display: inline-block;
+    // width: 70%;
+    vertical-align: middle;
+
+    .mall_bBtn {
+      // background-color: $primary;
+      // width: 90%;
+      // padding: 15px 0;
+      // color: #fff;
+      // border-radius: 10px;
+      // border: 0;
+      // outline: none;
+      cursor: pointer;
+      // @include font(1);
+      // @include baseBtn(90%, 50px, 10px);
+
+      @include baseBtn;
+      // width: 90%;
+      // margin: 10px 0 0;
+
+
+    }
+
+    .mall_bBtn_cir {
+      background-color: lighten($color: $primary, $amount:12);
+      width: 55px;
+      height: 55px;
+      border-radius: 55px;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      padding: 15px 10px;
+      margin: 0 5px;
+      @include font(1);
+      vertical-align: middle;
+      // @include baseBtn(30%, 50px, 10px);
+    }
+
+
+  }
+}
+
+//輪播
+.slider-bg {
+  overflow: hidden;
+  width: 100%;
+
+  h2 {
+    padding: 10px 0 0 10px;
+    color: $primary;
+    font-weight: 300;
+    margin: 0 0 0 20px;
+  }
+}
+
+.item {
+  text-align: center;
+
+  a {
+    display: block;
+    color: $dark;
+    text-decoration: none;
+    padding: 10px 0;
+    @include font(1);
+    font-weight: 300;
+
+
+    h4 {
+      padding: 10px 0;
+    }
+  }
+}
+
+
+
+@include media(1200px) {
+  .mall_content {
+
+    .mall_content_right {
+      width: 80%;
+
+    }
+  }
+
+
+  .price_btn {
+    margin-top: 10px;
+
+    .product_price {
+      color: $price;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 20%;
+      margin-right: 30px;
+
+      .price_sale {
+        font-weight: bolder;
+        @include font(6);
+      }
+
+      span:nth-child(1) {
+        font-weight: bolder;
+      }
+
+      span:nth-child(2) {
+        margin-left: 5px;
+        font-weight: bolder;
+      }
+    }
+
+    .mall_bBtn_all {
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      // margin: 5px 0;
+    }
+  }
+}
+
+
+@include media(767px) {
+  .mall_content {
+
+    .mall_content_right {
+      // border: 1px solid blue;
+      width: 100%;
+      margin: 0 auto;
+      align-content: space-evenly;
+
+      .mall_poduct_cart {
+        //商品卡片
+        margin: 0 auto 0;
+        margin: -30px auto 0;
+
+        .mall_poduct_content {
+          //卡片內容
+          flex-wrap: wrap;
+
+
+          .product_img {
+            //商品圖
+            width: 50%;
+            margin: 0 auto;
+            padding: 0px;
+
+            .big_pic {
+              width: 100%;
+
+              .b_img {
+                width: 100%;
+                padding: 10px;
+              }
+            }
+          }
+
+          .product_text {
+            //商品文字
+            width: 90%;
+            padding: 0px;
+            margin: 0 auto;
+
+            p {
+              @include font(4);
+            }
+
+            ul.product_features {
+              margin: 5px 0 0 20px;
+
+              >li {
+                @include font(1);
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .price_btn {
+    margin-top: 10px;
+
+    .mall_bBtn_all {
+
+
+      .mall_bBtn {
+        @include baseBtn;
+        // line-height: 60px;
+        // width: 100%;
+      }
+    }
+  }
+
+  // #slider {}
+
+  .slider-bg {
+
+    h2 {
+      padding: 5px 0 0 0;
+
+    }
+  }
+
+  .item a {
+    padding: 5px 0;
+  }
+
+  .item p {
+    @include font(0.5);
+  }
+}

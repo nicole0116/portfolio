@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Noto+Sans+TC:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="threeJs"></div>
+      <header>
+        <div class="header">
+          <div class="logo">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="nav_hamburger">
+            <div class="navBtn">
+              <div class="navBtn_btn">
+                <p>MENU</p>
+                <div>
+                  <span />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="nav_bar">
+          <div class="logo">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav_list">
+            <li data-name="program">
+              <a href="./program.html">
+                <div>
+                  <img src="./img/staff-poket.svg" alt="pm" />
+                </div>
+                <p>專案管理<br /><span>Project management</span></p>
+              </a>
+            </li>
+            <li data-name="tomato">
+              <a href="./tomato.html">
+                <div>
+                  <img src="./img/time-left.d4d509fa.svg" alt="clock" />
+                </div>
+                <p>番茄鐘<br /><span>Clock</span></p>
+              </a>
+            </li>
+            <li data-name="mall">
+              <a href="./mall.html">
+                <div>
+                  <img src="./img/shopping-bag.c63fa553.svg" alt="shop" />
+                </div>
+                <p>商城<br /><span>Shop</span></p>
+              </a>
+            </li>
+          </ul>
+          <div class="user_status">
+            <div class="user_shot">
+              <div>
+                <img src="../img/user.9c173fc0.svg" alt="member" />
+              </div>
+              <p id="mem_id">尚未登入</p>
+            </div>
+            <div class="status">
+              <div id="login">
+                <div>
+                  <a href="../member.html">會員中心</a>
+                </div>
+                <div id="mem_logout">登出</div>
+              </div>
+              <div id="logout">
+                <a href="../member_login.html">登入</a>
+              </div>
+            </div>
+          </div>
+          <div class="page_info">
+            <div class="title">
+              <p>鈴聲</p>
+            </div>
+            <ul class="page_info_list setting_bell">
+              <li>
+                <div>
+                  <img src="../img/check.svg" alt="check" width="20" />
+                </div>
+                <p>Primary_1Primary_1Primary_1Primary_1</p>
+              </li>
+              <li>
+                <div>
+                  <img src="../img/uncheck.svg" alt="check" width="20" />
+                </div>
+                <p>Primary_2</p>
+              </li>
+              <li>
+                <div>
+                  <img src="../img/uncheck.svg" alt="check" width="20" />
+                </div>
+                <p>Primary_3</p>
+              </li>
+              <li>
+                <div>
+                  <img src="../img/uncheck.svg" alt="check" width="20" />
+                </div>
+                <p>Primary_4</p>
+              </li>
+              <li>
+                <div>
+                  <img src="../img/uncheck.svg" alt="check" width="20" />
+                </div>
+                <p>Primary_5</p>
+              </li>
+            </ul>
+            <div class="title">
+              <p>新建專案</p>
+            </div>
+            <div class="setting_project">
+              <div>
+                <p>專案名稱 Project</p>
+                <input type="text" />
+                <p>專案專屬色 Color</p>
+                <div class="colors">
+                  <span class="active"></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <button>建立專案</button>
+              </div>
+            </div>
+            <div class="title">
+              <p>時間設定</p>
+            </div>
+            <div class="setting_timer">
+              <p>Work</p>
+              <div>
+                <label>
+                  <input type="number" />
+                  <p>分</p>
+                </label>
+                <label>
+                  <input type="number" />
+                  <p>秒</p>
+                </label>
+                <button>確定</button>
+              </div>
+            </div>
+            <div class="setting_timer">
+              <p>Break</p>
+              <div>
+                <label>
+                  <input type="number" />
+                  <p>分</p>
+                </label>
+                <label>
+                  <input type="number" />
+                  <p>秒</p>
+                </label>
+                <button>確定</button>
+              </div>
+            </div>
+            <div class="title">
+              <p>專案</p>
+            </div>
+            <ul class="page_info_list setting_pm">
+              <li>
+                <p><span></span>專案1專案1專案1專案1專案1專案1專案1</p>
+                <img src="../img/check.svg" alt="check" width="20" />
+              </li>
+              <li>
+                <p><span></span>專案2</p>
+                <img src="../img/uncheck.svg" alt="uncheck" width="20" />
+              </li>
+              <li>
+                <p><span></span>專案2</p>
+                <img src="../img/uncheck.svg" alt="uncheck" width="20" />
+              </li>
+              <li>
+                <p><span></span>專案2</p>
+                <img src="../img/uncheck.svg" alt="uncheck" width="20" />
+              </li>
+              <li>
+                <p><span></span>專案2</p>
+                <img src="../img/uncheck.svg" alt="uncheck" width="20" />
+              </li>
+            </ul>
+            <div class="setting_bookmark">
+              <p>已完成專案</p>
+            </div>
+            <div class="search_bar">
+              <label>
+                <img src="../img/icon/search.svg" alt="search" />
+                <input type="text" placeholder="Search Somethings..." />
+              </label>
+            </div>
+            <div class="title">
+              <p>商品分類</p>
+            </div>
+            <ul class="page_info_list setting_shop">
+              <li>
+                <p>分類分類分類分類分類分類分類分類</p>
+              </li>
+              <li>
+                <p>分類</p>
+              </li>
+              <li>
+                <p>分類</p>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="content">
+          <!-- 內容 -->
+          <!-- 卡片(有header) -->
+          <!-- @include card($width: auto, $height: auto, $header: true, $color: $primary) -->
+
+          <!-- 
+          .card_box {
+            @include card(500px, 500px, true, $primary);
+          } 
+          -->
+          <!-- <div class="card_box">
+            <div class="card_header">123</div>
+            <div class="card_content">456</div>
+          </div> -->
+          <!-- 卡片(沒header) -->
+          <!-- 
+          .card_box {
+            @include card(500px, 500px, false);
+          } 
+          -->
+          <!-- <div class="card_box">
+            <div class="card_content">456</div>
+          </div> -->
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/lib/three.min.js"></script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      uniform vec3 color;
+        uniform sampler2D texture;
+        varying float opacity;
+        varying vec3 vColor;
+        void main() {
+            gl_FragColor = vec4(vColor * color, 1);
+            gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+        }
+    </script>
+    <script src="../js/background.js"></script>
+    <script src="../js/layout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+ dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+/* table, caption, tbody, tfoot, thead, tr, th, td, */
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration:none;
+
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+	text-decoration:none;
+}
+body {
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+	margin: 0;
+	background: #e6e1d9;
+	letter-spacing: 3px;
+	line-height: 28px;
+	text-decoration:none;
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+}
+ol, ul ,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration:none;
+	font-weight: 300;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #555;
+}
+
+
+
+button{
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+
+}
+
+button:active{
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+
+a:active{
+	outline: none;
+	text-decoration: none;
+}
+
+p:active{
+	outline: none;
+	text-decoration: none;
+}
+
+a:visited{
+	outline: none;
+	/* color: #fff; */
+	text-decoration: none;
+}
+
+p:visited{
+	outline: none;
+}
+
+
+
+::selection {
+	background: hsla(38, 100%, 43%, 0.753);
+	color: #e8e8e8;
+	}
+
+::-moz-selection {
+		background: #b68832;
+		color: #e8e8e8;
+		}
+		img::selection {
+		background: transparent;
+		}
+		img::-moz-selection {
+		background: transparent;
+		}	
+
+
+
+		

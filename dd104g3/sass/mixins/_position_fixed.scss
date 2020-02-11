@@ -1,0 +1,6 @@
+@mixin positionfixed($z_index,$top,$left){
+    position:fixed;
+    z-index:$z_index;
+    top:$top;
+    left:$left;
+}

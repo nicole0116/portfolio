@@ -1,0 +1,76 @@
+/* 嵌入字型設定 */
+@font-face {
+    font-family:msunghk;
+    src: url(../font/msunghk.otf) format("opentype");
+}
+
+
+h2 {
+    font-size:40px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+
+}
+
+h3 {
+    font: 69px / 60px "msunghk";
+    line-height: 280px;
+    text-align: center;
+    color: hsla(45, 41%, 78%, 0.48);
+    text-shadow: 2px 2px 8px black;
+}
+
+h4 {
+    font-size:24px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding: 20px 0;
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+    color:#555555;
+}
+
+
+.t_white{
+    color:#dfdfdf;
+}
+
+.t_black{
+    color:#555555;
+}
+
+.nav_text{
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+
+}
+
+
+.t_s20{
+    font-size:20px;
+    font-weight: 500;
+}
+
+.t_small{
+    font-size:12px;
+}
+.contain_text{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 28px;
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+    
+
+}
+
+.contain_text2{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 28px;
+	font-family: 'Microsoft JhengHei',"Helvetica", "Arial","LiHei Pro",sans-serif;
+    color: #555;
+
+}

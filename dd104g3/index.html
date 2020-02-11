@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Noto+Sans+TC:400,500&display=swap"
+    rel="stylesheet" />
+  <link rel=icon href=favicon.ico>
+  <link rel="stylesheet" href="./css/main.css">
+  <title>職人口袋 | Master Pocket</title>
+</head>
+<body>
+  <div id="welcome">
+    <a href="./home.html" id="front">
+      <div class="button">
+        前台
+      </div>
+    </a>
+    <a href="./back.html" id="back"">
+      <div class="button">
+        後台
+      </div>
+    </a>
+  </div>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+    uniform vec3 color;
+      uniform sampler2D texture;
+      varying float opacity;
+      varying vec3 vColor;
+      void main() {
+          gl_FragColor = vec4(vColor * color, 1);
+          gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+      }
+  </script>
+  <script src="./js/lib/three.min.js"></script>
+  <script src="./js/lib/GLTFLoader.js"></script>
+  <script src="./js/lib/DRACOLoader.js"></script>
+  <script src="./js/lib/particle.js"></script>
+  <script src="./js/welcome.js"></script>
+</body>
+</html>

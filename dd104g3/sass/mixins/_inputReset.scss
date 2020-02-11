@@ -1,0 +1,8 @@
+@mixin inputReset {
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  @include font;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+}

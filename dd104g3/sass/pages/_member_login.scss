@@ -1,0 +1,758 @@
+.status{
+  .member_change0{
+    a{
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $dark;
+    }
+  }
+
+  .change{
+    background-color:$primary;
+    color: $white;
+  }
+}
+// ==============light box==================================
+.mem_mask3 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(194, 194, 194, 0.3);
+  position: fixed;
+  z-index: 10000;
+  left: 0%;
+  top: 0%;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.memlibox3 {
+  width: 0px;
+  height: 0px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 10001;
+  left: 0%;
+  top: 0%;
+  left: calc((100%) / 2);
+  border-radius: 0px;
+  box-shadow: 0 0 5px rgb(192, 192, 192);
+
+  opacity: 0;
+  visibility: hidden;
+
+  .light_box_title3 {
+    width: 100%;
+    height: 16%;
+    display: flex;
+    // border: 1px solid red;
+    @include hoverIcon(15);
+
+    img {
+      top: 8.5%;
+      left: 94.5%;
+    }
+  }
+
+  .light_box_content3 {
+    width: 100%;
+    height: 60%;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $dark;
+  }
+
+  .memlibtn3 {
+    width: 100%;
+    height: 25%;
+    // border: 1px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn_close3 {
+      @include baseBtn;
+      margin: 0 10% 2%;
+    }
+  }
+}
+
+.active_for_memlibox3 {
+  animation-duration: 0.3s;
+  animation-name: boxrotate3;
+  animation-fill-mode: forwards;
+
+}
+
+.closeani3{
+  animation-duration: 0.3s;
+  animation-name: closeani3;
+  animation-fill-mode: forwards;
+}
+
+.active_for_mask3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes boxrotate3 {
+  from {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+
+  to {
+    top: calc((100% - 220px) / 2);
+    left: calc((100% - 350px) / 2);
+    visibility: visible;
+    opacity: 1;
+    width: 350px;
+    height: 220px;
+  }
+}
+
+@keyframes closeani3 {
+  from {
+    top: calc((100% - 220px) / 2);
+    left: calc((100% - 350px) / 2);
+    opacity: 1;
+    visibility: visible;
+    width: 350px;
+    height: 220px;
+  }
+
+  to {
+    top: calc((100%) / 2);
+    left: 92%;
+    visibility: hidden;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+}
+
+// ================light box end======================
+.mem_login_all {
+  width: 100%;
+  height: 100%;
+  // border: 1px solid red;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .login_move_box {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    // border: 6px solid rgb(26, 24, 22);
+    z-index: 1;
+    background-color: $white;
+    border-radius: $radius;
+    box-shadow: 1px 1px 3px $shadow;
+
+    #mem_login_in_send {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      right: 100%;
+      visibility: hidden;
+      // border: 1px solid red;
+      transition: all 0.3s;
+      transform: scale(0);
+
+      // display: none;
+      &.active1 {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+
+      .sign_in_input {
+        width: 100%;
+        height: 100%;
+        // border: 1px solid rosybrown;
+        // background-color: rebeccapurple;
+        h2 {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          color:$dark ;
+          @include font(5);
+          // border: 1px solid red;
+        }
+
+        .sign_in_all {
+          width: 100%;
+          height: 70%;
+          text-align: center;
+
+          .sign_in_btn {
+            width: 100%;
+            height: 13%;
+            // border: 1px solid goldenrod;
+            text-align: center;
+            padding: 9% 0;
+
+            button {
+              @include inputReset;
+              @include baseBtn;
+            }
+          }
+
+          ul {
+            width: 100%;
+
+            li {
+              list-style: none;
+              margin-top: 15%;
+
+              div {
+                input {
+                  @include inputReset;
+                }
+
+                input {
+                  width: 60%;
+                  border: 0;
+                  padding: 3px 0 0px;
+                  border: 1px solid transparent;
+                  border-bottom-color:rgba($primary, 1);
+                  transition: 0.3s;
+                  position: relative;
+                  z-index: 4;
+                  cursor: pointer;
+                }
+
+                input::-webkit-input-placeholder {
+                  @include font(0);
+                  color: $white;
+                }
+
+                .for_in_info_ani {
+                  position: relative;
+                  // border: 1px solid gray;
+                  padding-bottom: 10px;
+                
+                  p {
+                    position: absolute;
+                    z-index: 10;
+                    top: -100%;
+                    left: 2%;
+                    font-weight: $fontweight;
+                    color: $dark;
+                    transition: all 0.3s;  
+                    @include font(0);              
+                  }
+
+                input:focus ~ p{
+                  color: $white;
+              
+                }
+                  .in_info_ani {
+                    position: absolute;
+                    height: 0;
+                    bottom: 8px;
+                    left: 0;
+                    width: 100%;
+                    transition: 0.3s;
+                    z-index: -1;
+                    // border: 1px solid red;
+                    background: $primary;
+                  }
+                  
+                  .text_info_in:focus~.testword1 {
+                    transition: 0.3s;                                  
+                  }
+
+                  .text_info_in:focus~.in_info_ani {
+                    transition: 0.3s;
+                    height: 200%;
+                    border-radius: 5px;
+                    z-index: 1;                                 
+                  }
+  
+                  .text_info_in:focus {
+                    padding: 3px 10px 0px;
+                    transition: 0.3s;
+                    color: $white;
+                  }                
+                }             
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #mem_login_send {
+      width: 100%;
+      height: 100%;
+      // border: 5px solid chocolate;
+      position: absolute;
+      
+
+
+
+
+      .sign_up_input {
+        // border: 1px solid rosybrown;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transition: all 0.3s;
+        h2{
+          @include font(5);
+        }
+
+        // display: none;
+        &.active {
+          opacity: 0;
+          visibility: hidden;
+          transform: scale(0);
+        }
+
+        // background-color: rebeccapurple;
+        .sign_up_all {
+          width: 100%;
+          height: 70%;
+          text-align: center;
+
+          .sign_up_btn {
+            width: 100%;
+            height: 13%;
+            // border: 1px solid goldenrod;
+            text-align: center;
+            padding: 9% 0;
+        
+            
+            button {
+              @include inputReset;
+              @include baseBtn;
+            }
+          }
+
+          ul {
+            width: 100%;
+
+            li {
+              list-style: none;
+              margin-top: 15%;
+
+              div {
+                input {
+                  @include inputReset;
+                }
+
+                input {
+                  width: 60%;
+                  border: 0;
+                  padding: 3px 0 0px;
+                  border: 1px solid transparent;
+                  border-bottom-color: rgba($primary, 1);
+                  transition: 0.3s;
+                  position: relative;
+                  z-index: 4;
+                  cursor: pointer;          
+                }
+         
+                input:focus ~ .text_info{
+                  color: $white;
+                }
+
+                input::-webkit-input-placeholder {
+                  @include font(0);
+                  color: $white;
+                }
+
+                .for_up_info_ani {
+                  position: relative;
+                  // border: 1px solid gray;
+                  padding-bottom: 10px;
+
+                  p {
+                    position: absolute;
+                    z-index: 10;
+                    top: -100%;
+                    left: 2%;
+                    color: $dark;
+                    font-weight: $fontweight;
+                    transition: all 0.3s;
+                    @include font(0);
+                  }
+                  input:focus ~ p{
+                    color: $white;
+                  }
+                }
+
+                .up_info_ani {
+                  position: absolute;
+                  height: 0;
+                  bottom: 8px;
+                  left: 0;
+                  width: 100%;
+                  transition: 0.3s;
+                  z-index: -1;
+                  // border: 1px solid red;
+                  background: $primary;
+                }
+
+                .text_info:focus~.up_info_ani {
+                  transition: 0.3s;
+                  height: 200%;
+                  border-radius: 5px;
+                  z-index: 1;
+                }
+
+                .text_info:focus {
+                  padding: 3px 10px 0px;
+                  transition: 0.3s;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+
+        h2 {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          color: $dark;
+          // border: 1px solid red;
+        }
+
+        .sign_up_pic {
+          // border: 1px solid green;
+          width: 100%;
+          height: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          .sign_img {
+            width: 100px;
+            height: 100px;
+            // border: 1px solid blue;
+            border-radius: 100%;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px $shadow;
+            background-color: $dark;
+            // margin-left: 45px;
+           
+
+            img {
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+         .sign_up_img_box{
+          position: absolute;
+          top: 55%;
+          left: 53%;
+       
+          .sign_up_img {        
+            @include baseBtn(45px, 45px, 30px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+              width: 25px;
+            }
+
+          }
+         }        
+        }
+      }
+    }
+
+    .login_switch {
+      width: 100%;
+      height: 15%;
+      // border: 1px solid greenyellow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+  }
+
+  .active1 {
+    animation-name: move_box1;
+    animation-duration: 0.3s;
+    transition: all 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .active2 {
+    animation-name: move_box2;
+    animation-duration: 0.3s;
+    transition: all 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes move_box1 {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes move_box2 {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .mem_login_center {
+    width: 100%;
+    height: 40%;
+    // border: 1px solid grey;
+    background-image: linear-gradient(-30deg, rgba($primary, 1), rgba($secondary, .5), rgba($third, 1));
+    display: flex;
+    border-radius: $radius;
+    box-shadow: 1px 1px 3px $shadow;
+    color: $white;
+
+
+    .mem_login_left {
+      width: 50%;
+      height: 100%;
+      // border: 1px solid yellow;
+      display: flex;
+      align-items: center;
+
+
+      .sign_left {
+        width: 100%;
+        // border: 1px solid aqua;
+        line-height: 50px;
+        padding-left: 7%;
+        h2{
+          @include font(4, 2);
+        }
+        p{
+          @include font(1, 2);
+        }
+
+        #mem_sign_btn {
+          @include baseBtn;
+        }
+      }
+    }
+
+    .mem_login_right {
+      width: 50%;
+      height: 100%;
+      // border: 1px solid yellow;
+      display: flex;
+      align-items: center;
+
+      .login_right {
+        width: 100%;
+        // border: 1px solid aqua;
+        line-height: 50px;
+        padding-left: 7%;
+        h2{
+          @include font(4, 2);
+        }
+        p{
+          @include font(1, 2);
+        }
+        #mem_login_btn {
+          @include baseBtn;
+        }
+      }
+    }
+  }
+}
+
+// ==============rwd 768px=============================
+@include media(768px) {
+  .mem_login_all {
+    justify-content: center;
+
+    .mem_login_center {
+      display: none;
+    }
+
+    .login_move_box {
+      width: 70%;
+
+      #mem_login_in_send {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        right: 0;
+
+        &.active7 {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+          // border:1px solid red;
+        }
+
+        .sign_in_input h2 {
+          visibility: hidden;
+        }
+      }
+
+      #mem_login_send {
+        width: 100%;
+        height: 100%;
+
+        // border: 2px solid hotpink;
+        .sign_up_input h2 {
+          visibility: hidden;
+        }
+
+        .login_switch {
+          width: 100%;
+          height: 11%;
+          // border: 2px solid rgb(66, 49, 110);
+          font-size: 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 4%;
+
+
+          button {
+            @include inputReset;
+            // border: 1px solid red;
+            cursor: pointer;
+          }
+
+          .active {
+            background-color: $primary;
+
+            #sw1_word1 {
+              color: $white;
+            }
+          }
+
+          .login_sw1 {
+            border-radius: 100px 0 0 100px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px $shadow;
+
+            p {
+              color: $dark;
+            }
+
+            .active4 {
+              transition: all 0.3s;
+              color: $white;
+            }
+
+            .login_sw1_ani1 {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              // border: 1px solid green;
+              background-color: $primary;
+              top: 0;
+              left: 100%;
+              z-index: -1;
+              animation-duration: 0.3s;
+              transition: all 0.3s;
+
+            }
+
+            .active3 {
+              animation-name: move_box3;
+              animation-duration: 0.3s;
+              transition: all 0.3s;
+              animation-fill-mode: forwards;
+            }
+
+            @keyframes move_box3 {
+              from {
+                left: 100%;
+              }
+
+              to {
+                left: 0;
+              }
+            }
+          }
+
+          .login_sw2 {
+            border-radius: 0 100px 100px 0px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px $shadow;
+
+            p {
+              color: $dark;
+            }
+
+            .active6 {
+              transition: all 0.3s;
+              color: $white;
+            }
+
+            .login_sw1_ani2 {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              // border: 1px solid green;
+              background-color: $primary;
+              top: 0;
+              right: 100%;
+              z-index: -1;
+              animation-duration: 0.3s;
+              transition: all 0.3s;
+
+            }
+
+            .active5 {
+              animation-name: move_box4;
+              animation-duration: 0.3s;
+              transition: all 0.3s;
+              animation-fill-mode: forwards;
+            }
+
+            @keyframes move_box4 {
+              from {
+                right: 100%;
+              }
+
+              to {
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// ============rwd 576px==================================
+@include media(576px){
+  .mem_login_all .login_move_box{
+    width: 100%;
+  }
+}

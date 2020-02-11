@@ -1,0 +1,217 @@
+
+/* cssrest 開始 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+	
+	font-family: "Microsoft JhengHei","PingFang TC","Helvetica","Arial",sans-serif;
+
+	
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background: #e6e1d9;
+	/* overflow-x: hidden; */
+}
+
+ol, ul {
+	text-decoration:none;
+}
+
+li{
+	list-style: none;
+	text-decoration:none;
+	line-height: 1.75rem;
+    font-weight: 500;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #555;
+}
+/* 
+img {
+	max-width: 100%;
+} */
+/* cssrest 結束 */
+
+
+/* 自訂樣式 開始 */
+
+a:link,a:hover,a:active,a:visited{
+	text-decoration: none;
+	outline: none;
+}
+
+button:link,button:hover,button:active,button:visited{
+	outline: none;
+}
+
+
+::selection {
+	background: #c77e00;
+	color: #e8e8e8;
+	}
+
+::-moz-selection {
+		background: #c77e00;
+		color: #e8e8e8;
+		}
+		img::selection {
+		background: transparent;
+		}
+		img::-moz-selection {
+		background: transparent;
+		}	
+
+/* 自訂樣式 結束 */
+
+
+/* font css 開始*/
+
+/* 嵌入字型設定 */
+@font-face {
+    font-family:msunghk;
+    src: url(../font/msunghk.otf) format("opentype");
+}
+
+/* font-family: 'Lato', sans-serif; */
+
+h1,h2, h3, h4, h5, h6, p,span,a {
+	font-family: "Microsoft JhengHei","PingFang TC","Helvetica","Arial",sans-serif;
+	letter-spacing: 0.18rem; /* 3px/16=0.1875‬ */
+	font-weight: 500;
+}
+
+
+/* vietnamese */
+@font-face {
+	font-family: 'Dancing Script';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(https://fonts.gstatic.com/s/dancingscript/v11/If2RXTr6YS-zF4S-kcSWSVi_szLviuEViw.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Dancing Script';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(https://fonts.gstatic.com/s/dancingscript/v11/If2RXTr6YS-zF4S-kcSWSVi_szLuiuEViw.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Dancing Script';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(https://fonts.gstatic.com/s/dancingscript/v11/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+h2{
+
+	font-size: 1.8rem;
+	line-height: 3rem;
+	padding: 2% 0;
+}
+
+h4{
+
+	font-size: 1.4rem;
+	line-height: 3rem;
+
+}
+
+h5{
+	font-size: 1.2rem;
+	line-height: 3rem;
+}
+
+p{
+	line-height: 1.75rem;
+	font-weight: 500;
+}
+
+.contain_text{
+	line-height: 1.75rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color:#555;
+}
+.t_white{
+    color:#dfdfdf;
+}
+
+.t_black{
+    color:#555;
+}
+
+.t_12{
+    font-size:0.75rem;
+}
+ 
+.t_16{
+    font-size:1rem;
+}
+
+.t_20{
+    font-size:1.25rem;
+}
+
+
+
+
+
+
+.handwrite{
+	font-family: 'Dancing Script', cursive;
+	color: #d8b05f;
+	font-size: 2.2rem;
+	margin-left: 2%;
+}
+
+
+
+
+
+.top20{
+	margin: 8% 0;
+}
+
+/* font css 結束 */

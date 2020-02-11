@@ -1,0 +1,46 @@
+// Here you can add other styles
+
+body {
+  font-family: "微軟正黑體", "Montserrat", "Noto Sans TC", sans-serif;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff;
+  background: #5fbfce;
+}
+
+// #backTable_1,#backTable_2,#backTable_3,#backTable_4,#backTable_5{
+//   display: none;
+// }
+.backTable {
+  display: none;
+}
+
+.mall_modify,.mall_delete,.mall_add,.text_del {
+  color: #5fbfce;
+  cursor: pointer; 
+  &:hover{
+    text-decoration:underline;
+  };
+}
+
+
+
+
+.lightBox_content {
+  width: 100%;
+  height: 100%;
+  // background-color: red;
+  align-items: center;
+  z-index: 999;
+  display: none;
+}
+
+.mall_add{
+  float: right;
+  margin: 5px;
+}

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>有點藝思咖啡館</title>
+    <link rel="icon" href="images/logo.ico">
+    <link rel="stylesheet" href="style/cssrest.css">
+    <link rel="stylesheet" href="style/font.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/icon.css">
+    <link rel="stylesheet" href="./style/show.css">
+    <link rel="stylesheet" href="./style/main.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <header class="novh_in">
+        <div class="top_black_in">
+            <div class="member">
+                <div id="logo">
+                    <a href="index.html"><img src="./images/logo.png" alt=""></a>
+                </div>
+                <div class="member_icon">
+                    <a href="#"><i class="large material-icons">shopping_cart</i></a>
+                </div>
+
+                <div class="member_icon">
+                    <a href="#"><i class="large material-icons">person</i></a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav_bar">
+                    <li ><a href="food.html">店內餐飲</a></li>
+                    <li id="bt_on"><a href="show.html">展演資訊</a></li>
+                    <li><a href="ofer.html">店內優惠</a></li>
+                    <li class="down_bt">場地租借
+                        <ul class="down_list">
+                            <li><a href="
+                                space_introduction.html">空間介紹</a></li>
+                            <li><a href="space_qa.html">常見Q&A</a></li>
+                        </ul>
+                    </li>
+                    <li class="down_bt">線上購物
+                        <ul class="down_list">
+                            <li><a href="coffee_bean.html">咖啡豆</a></li>
+                            <li><a href="drip_bag_coffee.html">濾掛式咖啡</a></li>
+                            <li><a href="accessories.html">咖啡器具</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact_us.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- <section class="coffee_food">
+            <h3>店內餐飲</h3>
+        </section>
+        -->
+        
+        <div class="show_content_bg" >
+
+            <div class="calendar_box contain_text" style="padding: 0 0 200px">
+                    <h2 class="t_white" style="text-align: center;padding: 60px 0;">9月展演資訊</h2>
+                <div class="calendar_box_content">
+                    <div class="calendar_box_td" id="no_music">
+                        <div class="calendar_num"></div>
+                        <span>30</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                  <div class="calendar_box_td have_music a_w" id="m1" onclick="m_1()">
+                        <a href="show-1.html" class="text-white ">
+                        <div class="calendar_num"></div>
+                        <span>1</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">北流概述 丁度嵐</p>
+                    </div>
+                </a> 
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>2</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>3</span>
+                        <span class="t_small"></span>
+                        <p class="music_name"></p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>4</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m2" onclick="m_2()">
+                        <div class="calendar_num"></div>
+                        <span>5</span>
+                        <span class="t_small">下午8:30</span>
+                        <p class="music_name">柯朋宇 島之歌</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>6</span>
+                        <span class="t_small"></span>
+                        <p class="music_name"></p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>7</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>8</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>9</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m3" onclick="m_3()">
+                        <div class="calendar_num"></div>
+                        <span>10</span>
+                        <span class="t_small">下午8:30</span>
+                        <p class="music_name">李若寧 借我幾分鐘</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>11</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m4" onclick="m_4()">
+                        <div class="calendar_num"></div>
+                        <span>12</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">2019記憶中的搖籃</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>13</span>
+                        <span class="t_small"></span>
+                        <p class="music_name"></p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>14</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m5" onclick="m_5()">
+                        <div class="calendar_num"></div>
+                        <span>15</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">2019記憶中的搖籃</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>16</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>17</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>18</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m6" onclick="m_6()">
+                        <div class="calendar_num"></div>
+                        <span>19</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">2019記憶中的搖籃</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>20</span>
+                        <span class="t_small"></span>
+                        <p class="music_name"></p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>21</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>22</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>23</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m7" onclick="m_7()">
+                        <div class="calendar_num"></div>
+                        <span>24</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">2019記憶中的搖籃</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>25</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td  have_music" id="m8" onclick="m_8()">
+                        <div class="calendar_num"></div>
+                        <span>26</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">2019記憶中的搖籃</p>
+                    </div>
+                    <div class="calendar_box_td" id="have_music">
+                        <div class="calendar_num"></div>
+                        <span>27</span>
+                        <span class="t_small"></span>
+                        <p class="music_name"></p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>28</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td have_music" id="m9" onclick="m_9()">
+                        <div class="calendar_num"></div>
+                        <span>29</span>
+                        <span class="t_small">下午7:00</span>
+                        <p class="music_name">2019記憶中的搖籃</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>30</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td">
+                        <div class="calendar_num"></div>
+                        <span>31</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td" id="no_music">
+                        <div class="calendar_num"></div>
+                        <span>1</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td" id="no_music">
+                        <div class="calendar_num"></div>
+                        <span>2</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+                    <div class="calendar_box_td" id="no_music">
+                        <div class="c"></div>
+                        <span>3</span>
+                        <span class="t_small"></span>
+                        <p class="music_name">&nbsp</p>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+<!-- 
+                    <div id="calendar_2">
+                        <p class="t_small t_white">8月30日 下午8:30 – 下午10:30</p>
+                        <h2 class="t_white">柯朋宇 島之歌</h2>
+
+                        <div class="t_s20 t_white">票價｜新台幣400元</div>
+
+                        <div class="calendar_img"></div>
+
+                        <div class="calendar_content">
+                            <div class="t_s20" style="margin:30px 0px">演出詳情 About The Event</div>
+
+                            <p>
+
+                                深受英國搖滾樂文化影響，以 Indie Rock 為主要的音樂風格。歌曲內容多半著眼於日常生活中的大小事，小至成長階段的改變，大至創作者個人的世界觀。詞曲雖皆由 OHAN
+                                一人獨自完成，但在音樂的編曲、製作及演出上皆和樂團成員們共同攜手完成。
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div id="calendar_3">
+                        <p class="t_small t_white">10月10日 下午8:30 – 下午10:30</p>
+                        <h2 class="t_white">李若寧 借我幾分鐘</h2>
+
+                        <div class="t_s20 t_white">票價:新台幣400元</div>
+
+                        <div class="calendar_img"></div>
+
+                        <div class="calendar_content">
+                            <div class="t_s20" style="margin:30px 0px">演出詳情 About The Event</div>
+
+                            <p>
+
+                                    我想透過這個演出機會說一段故事
+
+                                    這個故事很平凡 也許是很多人的日常
+                                    
+                                    有放棄 有失去 也有一些堅持
+                                    
+                                    我是李若寧 希望你能借我幾分鐘
+                                    
+                                    我寫詞 寫曲 創作 唱生活
+                                    
+                                    如果你願意借我幾分鐘認識我
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <div id="calendar_4">
+                        <p style="color:azure;margin-top:100px;">444444444444444444444444
+                            44444444444444444444444444444
+                            444444444444444444444444
+                            444444444444444444444444
+                            44444444444444444444444444444
+                            444444444444444444444444
+                        </p>
+                    </div>
+
+
+
+                    <div id="calendar_5">
+                        <p style="color:azure;margin-top:100px;">5555555555555555555
+                            555555555555555555555555555
+                            55555555555555555555555555555555
+                            55555555555555555555555555555555555555
+                            55555555555555555555555555555555555555
+                        </p>
+                    </div>
+
+
+
+                    <div id="calendar_6">
+                        <p style="color:azure;margin-top:100px;">66666666666
+                            666666666666666666666
+                            666666666666666666666666666
+                            66666666666666666666
+                            66666666666666666
+                        </p>
+                    </div>
+
+                    <div id="calendar_7">
+                        <p style="color:azure;margin-top:100px;">77777777777777
+                            777777777777777
+                            7777777777777777
+                        </p>
+                    </div>
+
+                    <div id="calendar_8">
+                        <p style="color:azure;margin-top:100px;">8888888888888
+                            888888888
+                        </p>
+                    </div>
+
+
+                    <div id="calendar_9">
+                        <p style="color:azure;margin-top:100px;">99999999999999
+                            999999999999999999
+                            99999999999999999999999999
+                            99999999999999999999999999
+                        </p>
+                    </div>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+<!-- 
+
+            <script>
+                function m_1() {
+                    var a_1 = document.getElementById("calendar_1");
+                    if (calendar_1.style.display === "none") {
+                        calendar_1.style.display = "block";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_1.style.display = "none";
+                    }
+                }
+
+
+
+                function m_2() {
+                    var a_2 = document.getElementById("calendar_2");
+                    if (calendar_2.style.display === "none") {
+                        calendar_2.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_2.style.display = "none";
+                    }
+                }
+
+
+
+                function m_3() {
+                    var a_3 = document.getElementById("calendar_3");
+                    if (calendar_3.style.display === "none") {
+                        calendar_3.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_3.style.display = "none";
+                    }
+                }
+
+                function m_4() {
+                    var a_4 = document.getElementById("calendar_4");
+                    if (calendar_4.style.display === "none") {
+                        calendar_4.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_4.style.display = "none";
+                    }
+                }
+
+                function m_5() {
+                    var a_5 = document.getElementById("calendar_5");
+                    if (calendar_5.style.display === "none") {
+                        calendar_5.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_5.style.display = "none";
+                    }
+                }
+
+                function m_6() {
+                    var a_6 = document.getElementById("calendar_6");
+                    if (calendar_6.style.display === "none") {
+                        calendar_6.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_6.style.display = "none";
+                    }
+                }
+
+                function m_7() {
+                    var a_7 = document.getElementById("calendar_7");
+                    if (calendar_7.style.display === "none") {
+                        calendar_7.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_8.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_7.style.display = "none";
+                    }
+                }
+
+
+
+                function m_8() {
+                    var a_8 = document.getElementById("calendar_8");
+                    if (calendar_8.style.display === "none") {
+                        calendar_8.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_9.style.display = "none"
+                    } else {
+                        calendar_8.style.display = "none";
+                    }
+                }
+
+
+
+
+
+
+                function m_9() {
+                    var a_9 = document.getElementById("calendar_9");
+                    if (calendar_9.style.display === "none") {
+                        calendar_9.style.display = "block";
+                        calendar_1.style.display = "none";
+                        calendar_2.style.display = "none";
+                        calendar_3.style.display = "none";
+                        calendar_4.style.display = "none";
+                        calendar_5.style.display = "none";
+                        calendar_6.style.display = "none";
+                        calendar_7.style.display = "none";
+                        calendar_8.style.display = "none"
+                    } else {
+                        calendar_9.style.display = "none";
+                    }
+                }
+   
+            </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-------------------- footer -------------------->
+
+        <footer>
+            <div class="footer_logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="footer_icon_all">
+                <div class="footer_icon"><i class="large material-icons">phone</i>
+                    <span>(02)2775-3385</span>
+                </div>
+                <div class="footer_icon"><i class="large material-icons">mail_outline</i>
+                    <span>service@artcafe.com</span>
+                </div>
+                <div class="footer_icon"><i class="large material-icons">location_on</i>
+                    <span>台北市大安區安和路一段27號18樓</span>
+                </div>
+            </div>
+
+            <p>Copyright © art café 版權所有. All rights reserved.</p>
+
+            <div class="footer_icon_all">
+                <div class="footer_icon share_icon">
+                    <a href="#"><img src="./images/facebook.png" alt=""></a>
+                </div>
+                <div class="footer_icon share_icon">
+                    <a href="#"><img src="./images/instagram.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 100,
+                duration: 1000,
+            });
+        </script>
+
+</body>
+
+</html>

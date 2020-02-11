@@ -1,0 +1,66 @@
+.clockFace {
+  display: flex;
+  justify-content: center;
+  #svg {
+    max-width: 350px;
+    min-width: 315px;
+    max-height: 350px;
+    min-height: 315px;
+    circle {
+      stroke-linecap: round;
+      fill: transparent;
+      stroke: $white;
+      stroke-width: 4px;
+      // stroke-dasharray: 1000;
+      // stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+    }
+    #gradient {
+      stop {
+        &:nth-of-type(1) {
+          stop-color: $secondary;
+        }
+        &:nth-of-type(2) {
+          stop-color: $primary;
+        }
+      }
+      &.rest{
+        stop {
+          &:nth-of-type(1) {
+            stop-color: $danger;
+          }
+          &:nth-of-type(2) {
+            stop-color: $third;
+          }
+        }
+      }
+    }
+    
+    #bar {
+      fill: rgba($white, 0.5);
+      stroke: url(#gradient);
+      // stroke-dashoffset: 400;
+    }
+    #outside {
+      stroke: $primary;
+      stroke-width: 1px;
+    }
+    #timer {
+      dominant-baseline: middle;
+      text-anchor: middle;
+      @include font(8);
+      fill: $dark;
+      transition: all 1s;
+    }
+  }
+  @include media(767px) {
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    #svg {
+      #timer {
+        @include font(5);
+      }
+    }
+  }
+}

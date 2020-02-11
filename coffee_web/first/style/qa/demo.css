@@ -1,0 +1,200 @@
+
+
+/* Reset */
+
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+    
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear
+}
+
+.fade.in {
+    opacity: 1
+}
+
+.collapse {
+    display: none
+}
+
+.collapse.in {
+    display: block
+}
+
+tr.collapse.in {
+    display: table-row
+}
+
+tbody.collapse.in {
+    display: table-row-group
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .35s;
+    -o-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-property: height, visibility;
+    -o-transition-property: height, visibility;
+    transition-property: height, visibility
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 修改下拉樣式 */
+
+
+
+
+
+
+.demo {
+	text-align: left;
+}
+
+
+#accordion .panel {
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	margin: 0 0 15px 10px;
+}
+
+#accordion .panel-heading {
+	padding: 0;
+	border-radius: 30px;
+}
+
+#accordion .panel-title a {
+	display: block;
+	padding: 12px 20px 12px 50px;
+	font-size: 18px;
+	color: #d4a037;
+	border: 1px solid transparent;
+	border-radius: 0;
+	position: relative;
+	border-bottom: 1px solid #d4a037;
+	transition: all 0.3s ease 0s;
+	text-decoration: none;
+	outline: none;
+}
+
+#accordion .panel-title a.collapsed {
+	background: #e6e1d9;
+	color: #555555;
+	font-family: 'Microsoft JhengHei', Arial, sans-serif;
+	border-bottom: 1px solid rgb(109, 109, 109);
+}
+
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after {
+	/* content: "\f107";
+	font-family: fontawesome;
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+	border-radius: 50%;
+	background: #ebb710;
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	border: 1px solid transparent;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+	position: absolute;
+	top: -5px;
+	left: -20px;
+	transition: all 0.3s ease 0s; */
+}
+
+#accordion .panel-title a.collapsed:after {
+	/* content: "\f105";
+	background: #fff;
+	color: #0d345d;
+	border: 1px solid #ddd;
+	box-shadow: none; */
+}
+
+#accordion .panel-body {
+	padding: 20px 25px 10px 24px;
+	background: transparent;
+	font-size: 14px;
+	color: #555;
+	line-height: 25px;
+	border-top: none;
+	position: relative;
+}
+
+#accordion .panel-body p {
+	padding-left: 25px;
+	border-left: 1px dashed #8c8c8c;
+	font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 28px;
+	font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    color: #555;
+
+}
+
+
+.contact_content{
+    /* background-color: rgb(100, 167, 38); */
+    height: 100vh;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 50px auto 40px;
+}

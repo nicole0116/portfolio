@@ -1,0 +1,1401 @@
+// @import "../../node_modules/vue2-datepicker/scss/index.scss";
+// $default-color: #555;
+// $primary-color: #81c7d4;
+.today {
+  background-color: transparent;
+}
+
+.mask {
+  opacity: 0;
+  @include positionfixed(-1, 0, 0);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: -2;
+  transition: opacity 0.3s;
+
+  &.masked {
+    opacity: 0.3;
+    z-index: 9;
+    // display: none;
+  }
+}
+
+.card_light_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 768px;
+  min-height: 600px;
+  // border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px 0px $shadow;
+  overflow: hidden;
+  padding-bottom: 15px;
+  transition: opacity 0.3s;
+  // opacity: 0;
+  // z-index: -1;
+  z-index: 999;
+
+  &.opneLight {
+    opacity: 1;
+    // display: block;
+    // z-index: 10001;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+  }
+
+  .card_header_title {
+    // position: relative;
+    background-color: $programcolor1;
+    min-height: 45px;
+    text-align: center;
+
+    h1 {
+      // background-color: $programcolor1;
+      @include font(5, 50px);
+      // @include positionCenter();
+      color: white;
+      cursor: url('../img/edit_w.b47c71f6.svg'), default !important;
+
+      input {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        text-align: center;
+        color: white;
+        @include font(5, 50px);
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+        margin: 0 auto;
+        font-weight: 600;
+      }
+    }
+
+    div {
+      // @include closeBtn($insideTagName:p);
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 11px;
+      top: 11px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: white;
+
+        img {
+          filter: invert(51%) sepia(10%) saturate(15%) hue-rotate(0deg) brightness(88%) contrast(89%);
+          // filter: invert(53%) sepia(39%) saturate(707%) hue-rotate(171deg) brightness(96%) contrast(90%);
+        }
+      }
+
+      img {
+        width: 50%;
+        @include positionCenter();
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .lightbox_content {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .left_aside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    // height: 100%;
+    // overflow: hidden;
+    // border-right: 1px solid #5395de;
+    padding-left: 31px;
+    padding-top: 25px;
+    height: auto;
+    position: relative;
+
+    .second_right,
+    .first_right {
+      transition: all 0.3s;
+      .todogo,
+      .first_right_member,
+      .second_right_deletecard,
+      .upfile,
+      .wave // div:nth-child(5),
+
+      // div:nth-child(6) 
+ {
+        width: 100%;
+        margin: 10px 0px;
+        padding: 10px;
+
+        &:hover {
+          background-color: #cee0ff;
+
+          // color:$primary ;
+          cursor: pointer;
+
+          img {
+            // filter: invert(54%) sepia(10%) saturate(3742%) hue-rotate(174deg) brightness(79%) contrast(94%);
+            filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+          }
+        }
+      }
+    }
+
+    .wave {
+      &.click_light {
+        background-color: #cee0ff;
+
+        img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+    }
+
+    .first_right_member {
+      &.click_light_two {
+        background-color: #cee0ff;
+
+        img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+    }
+
+    .todogo {
+      &.click_light_three {
+        background-color: #cee0ff;
+
+        img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+    }
+
+    .upfile {
+      &.click_light_four {
+        background-color: #cee0ff;
+
+        img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+    }
+
+    hr {
+      width: 75%;
+      border: 1px solid #e0dcdc;
+    }
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  h3 {
+    @include font(2, 40px);
+    font-weight: 400;
+    display: inline-block;
+  }
+}
+
+//遮罩
+
+//內卷軸怎麼不見了
+//右半邊修改
+.right_aside {
+  width: 70%;
+  overflow-y: scroll;
+  max-height: 600px;
+  min-height: 600px;
+
+  .memberRight {
+    padding-left: 30px;
+
+    .card_memver_head {
+      margin-bottom: 24px;
+
+      .card_member_title {
+        display: flex;
+        padding: 8px 0px;
+        margin-bottom: 4px;
+
+        h3 {
+          margin-left: 10px;
+          @include font(1, 20px);
+          font-weight: 600;
+        }
+
+        img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+
+      .memimg {
+        margin-left: 25px;
+
+        .add_member_to_card {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 2px solid rgb(160, 153, 153);
+          vertical-align: middle;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.3s;
+
+          .memeimg {
+            @include positionCenter();
+            width: 80%;
+            height: 80%;
+            filter: invert(59%) sepia(1%) saturate(2619%) hue-rotate(354deg) brightness(108%) contrast(84%);
+          }
+
+          &:hover {
+            border-color: #81c7d4;
+
+            .memeimg {
+              filter: invert(96%) sepia(58%) saturate(3512%) hue-rotate(161deg) brightness(100%) contrast(80%);
+            }
+          }
+
+          .member_plus_follow {
+            position: absolute;
+            top: 35px;
+            left: 0px;
+          }
+        }
+
+        .show_dote_member {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 2px solid rgb(160, 153, 153);
+          vertical-align: middle;
+          position: relative;
+
+          span {
+            @include positionCenter();
+          }
+        }
+
+        .card_member {
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 5px;
+          vertical-align: middle;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    //日曆部分
+    .calendar {
+      margin-bottom: 24px;
+
+      .calendar_title {
+        display: flex;
+        padding: 8px 0px;
+        margin-bottom: 4px;
+
+        h3 {
+          margin-left: 10px;
+          @include font(1, 20px);
+          font-weight: 600;
+        }
+
+        img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+
+      .calendar_status {
+        padding: 5px 25px;
+        display: flex;
+        @include font(0, 20px);
+        align-items: center;
+
+        .calendar_img {
+          width: 25px;
+          padding-right: 5px;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        p:nth-child(2) {
+          &:hover {
+            color: $primary;
+          }
+        }
+
+        // img:nth-child(3) {
+        //   margin-top: 5px;
+        //   margin-left: 7px;
+        // }
+
+        span:nth-child(3) {
+          margin-left: 7px;
+          border-radius: 5px;
+          padding: 0 5px;
+          transition: background-color 0.3s;
+
+          color: #fff;
+          padding: 2.5px 5px;
+          background: $danger;
+
+          &.calandarcolor {
+            background: $success;
+          }
+        }
+      }
+    }
+
+    //新版待辦清單
+    .card_todo_content {
+      margin-bottom: 50px;
+      min-height: 125px;
+
+      .todo_title {
+        display: flex;
+        padding: 8px 0px;
+        margin-bottom: 4px;
+        position: relative;
+
+        h3 {
+          margin-left: 10px;
+          @include font(1, 20px);
+          font-weight: 600;
+          cursor: pointer;
+          width: 80%;
+          word-break: break-word;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 10;
+          overflow: hidden;
+        }
+
+        .change_title {
+          margin-left: 15px;
+          width: 75%;
+
+          textarea {
+            @include font(0, 20px);
+            color: #777;
+            padding: 5px;
+            border: 1px solid #777;
+            margin: 5px 0;
+            border-radius: 10px;
+            width: 100%;
+            max-height: 162px;
+            min-height: 54px;
+            background-color: white;
+            outline: none;
+            resize: vertical;
+          }
+
+          .concernbutton {
+            button {
+              @include baseBtn(70px, auto, 5px);
+            }
+          }
+        }
+
+        .cardtitle_img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+
+        .all_card_todo_delete {
+          position: absolute;
+          right: 6.5%;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            filter: invert(92%) sepia(59%) saturate(5971%) hue-rotate(163deg) brightness(94%) contrast(85%);
+          }
+        }
+      }
+
+      //進度條
+      .todo_progress_bar {
+        display: flex;
+        padding-left: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        .progress_bar {
+          position: relative;
+          height: 5px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 5px;
+          margin-left: 5px;
+          width: 87%;
+          top: 9px;
+
+          span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            // width: 50%;
+            height: 4px;
+            transition: width 0.3s;
+            background: linear-gradient(to right, #bff9df, #a5b1ff);
+          }
+        }
+      }
+    }
+
+    .card_check_item {
+      display: flex;
+      padding: 6px 0px;
+      position: relative;
+      left: 25px;
+      border-bottom: 1px solid #e0dcdc;
+      width: 88.5%;
+      // white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      // transition: all  1s ease;
+      &:hover {
+        div:nth-child(3) {
+          opacity: 1;
+          right: 10%;
+        }
+
+        div:nth-child(4) {
+          opacity: 1;
+          right: 0;
+        }
+      }
+
+      div:first-child {
+        img {
+          width: 20px;
+          cursor: pointer;
+          // opacity: 0;
+        }
+      }
+
+      p {
+        margin-left: 15px;
+        @include font(0, 20px);
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        width: 70%;
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        // max-height: 162px;
+
+        &.lineThrough {
+          text-decoration: line-through;
+        }
+      }
+
+      div:nth-child(3) {
+        width: 20px;
+        // float: right;
+        // &:after{
+        //   content: "";
+        //   display: block;
+        //   clear: both;
+
+        // }
+        // pointer-events: none;
+        position: absolute;
+        right: -20%;
+        opacity: 0;
+        transition: all 0.3s;
+
+        img {
+          width: 100%;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &.add_to_tomato {
+            filter: invert(92%) sepia(59%) saturate(5971%) hue-rotate(163deg) brightness(94%) contrast(85%);
+          }
+
+          &:hover {
+            filter: invert(92%) sepia(59%) saturate(5971%) hue-rotate(163deg) brightness(94%) contrast(85%);
+          }
+        }
+      }
+
+      div:nth-child(4) {
+        width: 20px;
+        // float: right;
+        // &:after{
+        //   content: "";
+        //   display: block;
+        //   clear: both;
+        // }
+        position: absolute;
+        right: -10%;
+        opacity: 0;
+        transition: all 0.3s;
+
+        img {
+          width: 100%;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            filter: invert(92%) sepia(59%) saturate(5971%) hue-rotate(163deg) brightness(94%) contrast(85%);
+          }
+        }
+      }
+    }
+
+    .card_add_button {
+      padding-left: 25px;
+      margin-top: 10px;
+      display: inline-block;
+
+      label {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+
+        img {
+          cursor: pointer;
+        }
+
+        input {
+          @include btnReset();
+          background-color: $primary;
+          @include font(0, 20px);
+          color: #fff;
+          padding: 3px;
+          border-radius: 5px;
+          transition: all 0.3s;
+          width: 110px;
+          padding: 7px 27px 7px 7px;
+
+          &.addlength {
+            width: 250px;
+
+            &::placeholder {
+              text-align: center;
+            }
+          }
+
+          &::placeholder {
+            color: white;
+          }
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 5px;
+        }
+      }
+    }
+
+    //上傳附件
+    .card_file {
+      .card_file_title {
+        display: flex;
+        padding: 8px 0px;
+        margin-bottom: 4px;
+
+        h3 {
+          margin-left: 10px;
+          @include font(1, 20px);
+          font-weight: 600;
+        }
+
+        .file_title_img img {
+          filter: invert(99%) sepia(34%) saturate(6645%) hue-rotate(162deg) brightness(88%) contrast(86%);
+        }
+      }
+
+      ul {
+        color: #666;
+        list-style-position: inside;
+        list-style-type: disc;
+        @include font(0, 20px);
+
+        li {
+          position: relative;
+          margin-bottom: 15px;
+          margin-left: 10px;
+          list-style: none;
+
+          a {
+            display: inline-block;
+            width: calc(100% - 30px - 10%);
+            transition: all 0.3s;
+            // text-overflow: ellipsis;
+            // overflow:hidden;
+            color: #666;
+            text-decoration: none;
+            // border: 1px solid red;
+          }
+
+          div {
+            transition: all 0.3s;
+          }
+
+          .file_wrap {
+            display: inline-block;
+            width: 112px;
+            height: 80px;
+            // background-color: $primary;
+            color: white;
+            opacity: 1;
+            position: relative;
+
+            .file_title {
+              @include font(0, 20px);
+              @include positionCenter();
+            }
+
+            .file_picture {
+              object-fit: cover;
+              object-position: 50% 50%;
+              width: inherit;
+              height: inherit;
+            }
+          }
+
+          .file_arc {
+            // border: 1px solid red;
+            vertical-align: top;
+            width: 70%;
+            word-break: break-word;
+            display: inline-block;
+            // display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &:hover {
+            a {
+              color: $primary;
+            }
+
+            div {
+              opacity: 1;
+            }
+          }
+
+          // a {
+          //   color: #666;
+          //   text-decoration: none;
+          // }
+
+          .trash {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            @include positionCenter(y);
+            right: 5.4%;
+            top: 17%;
+            opacity: 0;
+            transition: all 0.3s;
+
+            &:hover {
+              filter: invert(92%) sepia(59%) saturate(5971%) hue-rotate(163deg) brightness(94%) contrast(85%);
+            }
+
+            img .garbage {
+              // @include  positionCenter();
+              width: 21px;
+              height: 21px;
+            }
+          }
+        }
+      }
+
+      .card_upload_file {
+        padding-left: 25px;
+        margin-top: 10px;
+
+        form {
+          text-align: left;
+          margin-top: 10px;
+
+          .upfile_content {
+            display: inline-block;
+            @include font(0, 20px);
+            color: #fff;
+            cursor: pointer;
+            padding: 5px;
+            background-color: $primary;
+            position: relative;
+            border-radius: 5px;
+
+            input {
+              position: fixed;
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//完成卡片後的CSS
+.history_card_light_box {
+  .right_aside {
+    width: 100%;
+
+    .memberRight {
+      h3 {
+        cursor: default;
+      }
+
+      .card_todo_content {
+        .todo_title {
+          h3 {
+            cursor: default;
+          }
+        }
+
+        .card_check_item {
+          cursor: default;
+
+          img {
+            cursor: default;
+          }
+        }
+      }
+
+      .calendar {
+        .calendar_status {
+          p:nth-child(2):hover {
+            color: black;
+            cursor: default;
+          }
+
+          span:nth-child(3) {
+            cursor: default;
+          }
+
+          .calendar_img {
+            cursor: default;
+          }
+        }
+      }
+
+      .card_file {
+        .card_upload_file {
+          form {
+            .upfile_content {
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//待辦清單燈箱
+.todo_lightbox {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  position: fixed;
+  box-shadow: 3px 3px 6px 0px $shadow;
+  // display: none;
+  top: 247px;
+  z-index: 9999999;
+
+  // &.opentodo_lightbox {
+  //   display: block;
+  // }
+
+  p {
+    @include font(1, 20px);
+  }
+
+  .todo_lightbox_input {
+    @include font(1, 20px);
+    outline: none;
+    background-color: transparent;
+    color: #666666;
+    padding: 5px;
+    border: 1px solid #666666;
+    border-radius: 10px;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .todo_lightbox_botton {
+    text-align: right;
+
+    button {
+      @include btnReset();
+      @include font(1, 20px);
+      cursor: pointer;
+      // border: 2px solid #fff;
+      background-color: $primary;
+      color: #fff;
+      padding: 7px;
+      margin-top: 5px;
+      // border-radius: 5px;
+      transition: all 0.3s;
+      border-radius: 5px;      
+      // @include baseBtn(auto, auto, 10px);
+    }
+  }
+}
+
+// 卡片內部跳窗
+// .card_detail_lightbox {
+//   background-color: white;
+//   border-radius: 10px;
+//   padding: 15px;
+//   width: 200px;
+//   position: absolute;
+//   top: 550px;
+//   box-shadow: 3px 3px 6px 0px $shadow;
+//   display: none;
+//   z-index: 9999999;
+//   &.open_card_detail {
+//     display: block;
+//   }
+
+//   .card_detail_lightbox_input {
+//     @include font(1, 20px);
+//     outline: none;
+//     background-color: transparent;
+//     color: #666666;
+//     padding: 5px;
+//     border: 1px solid #666666;
+//     border-radius: 10px;
+//     width: 100%;
+//     margin: 5px 0;
+//   }
+
+//   form {
+//     text-align: left;
+
+//     button {
+//       @include btnReset();
+//       @include font(1, 20px);
+//       cursor: pointer;
+//       border: 2px solid #fff;
+//       background-color: $primary;
+//       color: #fff;
+//       padding: 5px;
+//       margin-top: 5px;
+//       border-radius: 5px;
+//       transition: all 0.3s;
+
+//       &:hover {
+//         background-color: #fff;
+//         color: $primary;
+//         border: 2px solid $primary;
+
+//       }
+//     }
+//   }
+// }
+
+//日立燈箱
+.calendar_lightbox {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  position: fixed;
+  top: 243px;
+  box-shadow: 3px 3px 6px 0px $shadow;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 9999999;
+
+  h3 {
+    @include font(1, 20px);
+    border-bottom: 1px solid #e0dcdc;
+    padding: 0px 0 10px 0px;
+  }
+
+  p.day_date {
+    @include font(0, 20px);
+    margin-top: 5px;
+  }
+}
+
+//日立css
+.calendar_lightbox_content {
+  .calendar {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .calendar_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #666666;
+
+    &>button {
+      // width: 50px;
+      // height: 50px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: #666666;
+
+      &:hover {
+        color: #333333;
+      }
+    }
+
+    .calendar_header>p {
+      width: 30%;
+      text-align: center;
+    }
+  }
+
+  .calendar_body {
+    width: 100%;
+    margin-top: 5px;
+
+    td {
+      width: 30%;
+      text-align: center;
+      vertical-align: top;
+      color: #999999;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin-left: 5px;
+
+      &:first-child,
+      &:last-child {
+        color: $danger;
+      }
+
+      p {
+        width: 20px;
+      }
+
+      &:hover {
+        background-color: #e0f4f6;
+      }
+
+      .now.day {
+        color: #fff;
+      }
+    }
+
+    .day {
+      color: #666666;
+    }
+  }
+}
+
+//上傳附件跳窗
+.file_lightbox {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  position: fixed;
+  top: 302px;
+  box-shadow: 3px 3px 6px 0px $shadow;
+  // display: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 9999999;
+
+  //  &.openfile{
+  //    display: block;
+  //  }
+  h3 {
+    @include font(1, 20px);
+  }
+
+  form {
+    text-align: end;
+    margin-top: 10px;
+
+    .upfile_content {
+      display: inline-block;
+      @include font(0, 20px);
+      color: #fff;
+      cursor: pointer;
+      padding: 5px;
+      background-color: $primary;
+      position: relative;
+      border-radius: 5px;
+
+      input {
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+//成員跳窗
+.card_member_lightbox {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  position: fixed;
+  top: 193px;
+  box-shadow: 3px 3px 6px 0px $shadow;
+  // display: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 9999999;
+  overflow-y: scroll;
+  max-height: 300px;
+  min-height: 150px;
+
+  // &.open_card_mem{
+  //   display: block;
+  // }
+  h3 {
+    @include font(1, 30px);
+    text-align: start;
+  }
+
+  h4 {
+    @include font(0, 30px);
+    text-align: start;
+    font-weight: 400;
+  }
+
+  label {
+    input {
+      @include font(1, 20px);
+      outline: none;
+      background-color: transparent;
+      color: #666666;
+      padding: 5px;
+      border: 1px solid #666666;
+      border-radius: 10px;
+      width: 100%;
+      margin: 5px 0;
+
+      &::placeholder {
+        @include font(0, 20px);
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 15px 0px;
+      cursor: pointer;
+
+      .card_member_message {
+        display: flex;
+        position: relative;
+        margin: 7px 0px;
+
+        .card_memberId {
+          color: #777;
+          margin-left: 7px;
+        }
+
+        &.mem_addcolor {
+          color: $radioActive;
+
+          .card_memberId {
+            color: $radioActive;
+            // margin-left: 7px;
+          }
+        }
+
+        div:first-child {
+          width: 20px;
+          height: 20px;
+          // border-radius: 50%;
+          overflow: hidden;
+          vertical-align: middle;
+
+          img {
+            // vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            margin-right: 0;
+          }
+        }
+
+        span.card_member_name {
+          @include positionCenter(y);
+          left: 35%;
+        }
+
+        div:nth-child(2) {
+          width: 20px;
+          height: 20px;
+
+          border-radius: 50%;
+          overflow: hidden;
+          vertical-align: middle;
+          @include positionCenter(y);
+          left: 15%;
+
+          img {
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 卡片動畫效果
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.fade-enter {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.fade-leave-to {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.horizentalfade-enter-active,
+.horizentalfade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.horizentalfade-enter {
+  transform: translate(-350%, -50%);
+  opacity: 0;
+}
+
+.horizentalfade-leave-to {
+  transform: translate(-350%, -50%);
+  opacity: 0;
+}
+
+
+//自選顏色
+.vc-input__desc {
+  display: block !important;
+  background-color: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: auto !important;
+  position: initial !important;
+}
+
+.vc-input__label {
+  display: block !important;
+  background-color: transparent !important;
+  width: auto !important;
+  height: 25px !important;
+  margin-top: 12px !important;
+  position: initial !important;
+  cursor: default !important;
+}
+
+//新增顏色時位置會跑掉
+.add_colors_array {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  //  right: 4px;
+  // top: -2px;
+  box-sizing: border-box;
+  margin: 2.5px;
+  border: 2px solid $dark;
+  display: inline-block;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  .add_inner_color {
+    width:80%;
+    // height:80%;
+    // padding: 5%;
+    
+    @include positionCenter();
+    // position: absolute;
+    // left:50%;
+    // top:50%;
+    // transform: translate(-50%,-50%);
+  }
+
+  &:hover {
+    border-color: #81c7d4;
+
+    .add_inner_color {
+      filter: invert(96%) sepia(58%) saturate(3512%) hue-rotate(161deg) brightness(100%) contrast(80%);
+    }
+  }
+}
+
+.new_add {
+  position: absolute;
+  bottom: 0;
+  right: 22.5%;
+  z-index: 999999999;
+  width: 100px;
+  height: 30px;
+  @include btnReset;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: $dark;
+  transition: all 0.3s;
+  // float: right;
+  .add_button{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 5px;
+  }
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+//卡片rwd
+@include media(1200px){
+  .card_light_box{
+    width: 650px;
+  }
+}
+@include media(850px) {
+  .card_light_box {
+    width: 90%;
+    // height: 100%;
+  }
+}
+
+@include media(748px) {
+  .card_light_box {
+    height: 100%;
+    width: 100%;
+    transform: translate(0%, 0%);
+    top: 0;
+    left: 0;
+
+    .lightbox_content {
+      flex-direction: column;
+      margin-top: 0px;
+      overflow-y: scroll;
+      max-height: 100vh;
+      height: 82vh;
+
+      .left_aside {
+        width: 100%;
+        border: none;
+
+        .first_right,
+        .second_right {
+
+          .todogo,
+          .first_right_member,
+          .second_right_deletecard,
+          .upfile,
+          .wave {
+            width: 40%;
+          }
+
+          .card_member_lightbox {
+            top: 172px;
+          }
+        }
+
+        hr {
+          width: 90%;
+        }
+
+        .calendar_lightbox {
+          top: 221px;
+        }
+
+        .todo_lightbox {
+          top: 228px;
+        }
+
+        .file_lightbox {
+          top: 282px;
+        }
+      }
+
+      .right_aside {
+        width: 100%;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 503px) {
+  .card_light_box {
+
+    // .left_aside{
+    //   .first_right,.second_right{
+    // .todogo,
+    //   .first_right_member,
+    //   .second_right_deletecard,
+    //   div:nth-child(4),
+    //   div:nth-child(5),
+    //   div:nth-child(6){
+    //     width: 40%;
+    //   }
+    //   }
+    //   }
+    .lightbox_content {
+      .right_aside {
+        .card_todo_content {
+          .card_check_item {
+            div:nth-child(3) {
+              margin-left: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

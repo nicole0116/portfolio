@@ -1,0 +1,56 @@
+.btn-primary {
+  background-color: #81c7d4 !important;
+  border-color: #81c7d4 !important;
+  border-radius: 5px !important;
+}
+
+.fc-day-header {
+  background-color: #546A76 !important;
+  color: white !important;
+}
+
+.fc-content {
+  background-color: #B4D4EE;
+
+}
+
+.fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
+  color: #777777 !important;
+  border: none !important;
+}
+
+.fc-event {
+  border: none !important;
+  color: #546A76 !important;
+}
+
+.fc-day-number {
+  color: #546A76 !important;
+}
+
+
+
+#content {
+  
+.rwdcalendar{
+   
+    // max-width: 1000px;
+    border: 1px solid red;
+    // margin-top: 50px;
+    margin: 50px auto;
+
+    // background-color:#e6cdec;
+    #calendar {
+      max-width: 1000px;
+      // max-width: 900px;
+      min-height: 90vh;
+      // display: none;
+      // width: 100%;
+      // height: 100%;
+      border: 1px solid blue;
+      // padding: 15px;
+      border-radius: 20px;
+      box-shadow: 1px 1px 1px $shadow;
+      }
+ }
+}

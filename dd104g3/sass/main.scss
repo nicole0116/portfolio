@@ -1,0 +1,20 @@
+@import "./base/_var";
+@import "./base/scrollBar";
+@import "./mixins/_mixin";
+
+@import "./layout/layout";
+@import "./layout/_clock";
+//pages
+@import "./pages/_mall.scss";
+@import "./pages/_program.scss";
+@import "./pages/_card";
+@import "./pages/_member";
+@import "./pages/_member_login.scss";
+@import "./pages/_cart";
+@import "./pages/_tomato";
+@import "./pages/calandar";
+@import "./pages/_calendarbyHand";
+@import './pages/_welcome.scss';
+
+@import "./pages/nice-select"; // Or 'nice-select-prefixed'. See 'Notes' section.
+@import './datepicker/_index';

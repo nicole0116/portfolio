@@ -1,0 +1,211 @@
+.contact_content {
+    padding: 30px 0 200px;
+    
+}
+
+/* 我的表單樣式 */
+
+
+table.contact_form {
+    vertical-align: top;
+    margin: 0 auto;
+    width: 100%;
+}
+
+table.contact_form>tr,
+td {
+    /* border: 1px solid blueviolet; */
+
+    padding: 10px
+}
+
+
+
+
+
+
+
+.form-select :hover {
+    background-color: gray;
+}
+
+
+
+
+
+.form-select:active {
+    outline: none;
+}
+
+
+
+.form_input {
+    height: 34px;
+    padding-left: 2px;
+    padding-right: 40px;
+    /* font-family: "微軟正黑體", "Helvetica", "Arial", "LiHei Pro", sans-serif; */
+    font-size: 14px;
+    outline: none;
+    border: none;
+}
+
+
+
+.form_input:active,
+.form_input:active:focus {
+    outline: none;
+
+
+}
+
+
+
+td:nth-child(1) {
+    text-align: right;
+
+}
+
+td:nth-child(3) {
+    text-align: right;
+
+}
+
+
+
+
+.contact_box {
+    width: 800px;
+    margin: 0 auto;
+    margin: 50px auto 40px;
+}
+
+
+.form_button:active {
+    outline: none;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form_textarea {
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    resize: none;
+    border: none;
+    width: 100%;
+}
+
+
+
+.form_radio {
+    display: inline-block;
+    position: relative;
+
+}
+
+.form_radio label {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #ef4949;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+.form_radio input:checked+label:after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: #ef4949;
+    border-radius: 50%;
+}
+
+
+
+.form_button {
+
+    overflow: auto;
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+    font-family: "微軟正黑體", "Helvetica", "Arial", "LiHei Pro", sans-serif;
+    font-size: 18px;
+    position: relative;
+    border: 1px solid #d8af5e;
+    vertical-align: top;
+    background-color: #d4a038;
+    transition: all .5s;
+    color: #fff;
+    outline: none;
+
+}
+
+
+.form_button:active{
+    outline: none;
+}
+
+
+
+
+.form_button:hover {
+    background-color: #daaf59;
+    outline: none;
+}
+
+.store {
+
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}

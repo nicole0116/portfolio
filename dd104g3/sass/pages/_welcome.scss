@@ -1,0 +1,87 @@
+#welcome {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-30deg, rgba($primary, 1), rgba($secondary, .5), rgba($third, 1));
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  #front, #back{
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    @include positionCenter(y);
+    .button {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @include font(8);
+      z-index: 1;
+      transition: transform .3s;
+      &:hover {
+        transform: scale(1.3)
+      }
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: inherit;
+        animation: btn_animate linear infinite 2s;
+      }
+      &::before {
+        z-index: -1;
+      }
+      &::after {
+        z-index: -2;
+        animation-delay: 1s;
+      }
+    }
+  }
+  #front {
+    left: 15%;
+  }
+  #back {
+    right: 15%;
+  }
+  @include media(1023px){
+    #front {
+      left: 10%;
+    }
+    #back {
+      right: 10%;
+    }
+    #front, #back{
+      .button {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  }
+  @include media(479px){
+    #front, #back{
+      .button {
+        @include font(5);
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+@keyframes btn_animate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

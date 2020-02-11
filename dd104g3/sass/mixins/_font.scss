@@ -1,0 +1,19 @@
+@function font($level: 0) {
+  @return $baseFont + round($level * $fontLevel);
+}
+@function line($size) {
+  @return ceil($size * $lineLevel / $baseLine) * $baseLine;
+}
+//字大小間距行高 @include font(數字, 行高:預設null) 0->14px 1->16px 2->18px 3->20 4->22 5->24px
+//ex: @include font(2);
+@mixin font($level: 0, $lineHeight: null) {
+  $size: font($level);
+  $line: line($size);
+  letter-spacing: $size / 5;
+  font-size: $size;
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  } @else {
+    line-height: $line;
+  }
+}

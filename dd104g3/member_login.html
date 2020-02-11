@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel=icon href=favicon.ico>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Noto+Sans+TC:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>職人口袋 | 登入</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="threeJs"></div>
+      <header>
+        <div class="header">
+          <div class="logo">
+            <a href="./home.html">
+              <img src="./img/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="nav_hamburger">
+            <div class="navBtn">
+              <div class="navBtn_btn">
+                <p>MENU</p>
+                <div>
+                  <span />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="nav_bar">
+          <div class="logo">
+            <a href="./home.html">
+              <img src="./img/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav_list">
+            <li data-name="program">
+              <a href="./program.html">
+                <div>
+                  <img src="./img/staff-poket.svg" alt="pm" />
+                </div>
+                <p>專案管理<br /><span>Project management</span></p>
+              </a>
+            </li>
+            <li data-name="tomato">
+              <a href="./tomato.html">
+                <div>
+                  <img src="./img/time-left.d4d509fa.svg" alt="clock" />
+                </div>
+                <p>番茄鐘<br /><span>Clock</span></p>
+              </a>
+            </li>
+            <li data-name="mall">
+              <a href="./mall.html">
+                <div>
+                  <img src="./img/shopping-bag.c63fa553.svg" alt="shop" />
+                </div>
+                <p>商城<br /><span>Shop</span></p>
+              </a>
+            </li>
+          </ul>
+          <div class="user_status">
+            <div class="user_shot">
+              <div>
+                <img src="./img/user.9c173fc0.svg" alt="member" id="user_shot"/>
+              </div>
+              <p id="mem_id">尚未登入</p>
+            </div>
+            <div class="status">
+              <div id="login">
+                <div>
+                  <a href="./member.html">會員中心</a>
+                </div>
+                <div id="mem_logout">登出</div>
+              </div>
+              <div id="logout">
+                <a href="./member_login.html">登入</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="content">
+          <!-- =====================light box================================================        -->
+          <div id="mem_mask3" class="mem_mask3"></div>
+          <div class="memlibox3" id="memlibox3">
+            <div class="light_box_title3" id="light_box_title3">
+              <img src="./img/member_img/times-solid.svg" alt="" width="15" />
+              <img src="./img/member_img/times-solid1.svg" alt="" width="15" />
+            </div>
+            <div class="light_box_content3">
+              <p>送出資料？</p>
+            </div>
+            <div class="memlibtn3">
+              <button id="liclose3" class="btn_close3">取 消</button>
+              <button class="btn_close3" id="member_sign_up">確 定</button>
+            </div>
+          </div>
+          <!-- ==================light box end=================================        -->
+          <div class="mem_login_all">
+            <div class="mem_login_center">
+              <div class="mem_login_left">
+                <div class="sign_left">
+                  <h2>還沒有帳號嗎?</h2>
+                  <p>
+                    立即成為數百萬每日使用 職人口袋－Master Pocket 的用戶之一！
+                  </p>
+                  <button id="mem_sign_btn">Sign Up</button>
+                </div>
+              </div>
+              <div class="mem_login_right">
+                <div class="login_right">
+                  <h2>立即登入!</h2>
+                  <p>馬上登入開始使用 職人口袋－Master Pocket 吧!</p>
+                  <button id="mem_login_btn">Sign In</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="login_move_box" id="login_move_box ">
+              <div id="mem_login_send" class="mem_login_send">
+                <!-- ================================rwd 768 switch =====================================           -->
+                <div id="login_switch" class="login_switch">
+                  <button id="login_sw1" class="login_sw1 active">
+                    <span id="login_sw1_ani1" class="login_sw1_ani1"></span>
+                    <p id="sw1_word1">Sign Up</p>
+                  </button>
+                  <button class="login_sw2" id="login_sw2">
+                    <span id="login_sw1_ani2" class="login_sw1_ani2"></span>
+                    <p id="sw1_word2">Sign In</p>
+                  </button>
+                </div>
+                <!-- ================================rwd 768 switch end=====================================           -->
+                <div class="sign_up_input">
+                  <h2>Sign Up</h2>
+                  <div class="sign_up_pic">
+                    <div class="sign_img">
+                      <img
+                        id="show_sign_img"
+                        src="./img/icon/user.9c173fc0.svg"
+                        alt=""
+                        width="100"
+                        height="100"
+                      />
+                    </div>
+                    <!-- ============================個人照上傳=====================================                   -->
+                    <label class="sign_up_img_box">
+                      <input
+                        type="file"
+                        name="file"
+                        onchange="showImg(this)"
+                        style="display: none;"
+                      />
+                      <div class="sign_up_img">
+                        <img src="img/photo.88db8356.svg" alt="" />
+                      </div>
+                    </label>
+
+                    <!-- ============================個人照上傳 end=====================================                   -->
+                  </div>
+                  <div class="sign_up_all">
+                    <ul>
+                      <li>
+                        <div>
+                          <label class="for_up_info_ani">
+                            <input
+                              type="text"
+                              placeholder="請輸入帳號"
+                              autocomplete="off"
+                              class="text_info"
+                              id='memId_s'
+                            />
+                            <span class="up_info_ani"></span>
+                            <p>Account</p>
+                          </label>
+                          <p class="error_not"></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <label class="for_up_info_ani">
+                            <input
+                              type="password"
+                              placeholder="請輸入密碼"
+                              autocomplete="off"
+                              class="text_info"
+                              id='memPsw_s'
+                            />
+                            <span class="up_info_ani"></span>
+                            <p>Password</p>
+                          </label>
+                          <p class="error_not"></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <label class="for_up_info_ani">
+                            <input
+                              type="email"
+                              placeholder="請輸入電子信箱"
+                              autocomplete="off"
+                              class="text_info"
+                              id='memEmail'
+                            />
+                            <span class="up_info_ani"></span>
+                            <p>Email</p>
+                          </label>
+                          <p class="error_not"></p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="sign_up_btn">
+                      <button id="open_sign_ligh1">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- =================sign in===========================             -->
+              <div class="mem_login_in_send" id="mem_login_in_send">
+                <div class="sign_in_input">
+                  <h2>Sign In</h2>
+                  <div class="sign_in_all">
+                    <ul>
+                      <li>
+                        <div>
+                          <label class="for_in_info_ani">
+                            <input
+                              type="text"
+                              name="memId"
+                              placeholder="請輸入帳號"
+                              autocomplete="off"
+                              class="text_info_in"
+                              id="memId"
+                              value=""
+                            />
+                            <span class="in_info_ani"></span>
+                            <p>Account</p>
+                          </label>
+                          <p class="error_info"></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <label class="for_in_info_ani">
+                            <input
+                              type="password"
+                              name="memPsw"
+                              placeholder="請輸入帳號"
+                              autocomplete="off"
+                              class="text_info_in"
+                              id="memPsw"
+                              value=""
+                            />
+                            <span class="in_info_ani"></span>
+                            <p>Password</p>
+                          </label>
+                          <p class="error_info"></p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="sign_in_btn">
+                      <button id="btnLogin">Sign In</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/lib/three.min.js"></script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      uniform vec3 color;
+          uniform sampler2D texture;
+          varying float opacity;
+          varying vec3 vColor;
+          void main() {
+              gl_FragColor = vec4(vColor * color, 1);
+              gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+          }
+    </script>
+    <script src="./js/lib/particle.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/layout.js"></script>
+    <script src="./js/member_login.js"></script>
+    <script src="./js/member_php.js"></script>
+  </body>
+</html>

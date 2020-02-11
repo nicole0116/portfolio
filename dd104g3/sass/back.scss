@@ -1,0 +1,55 @@
+// If you want to override variables do it here
+@import "./base/_var";
+@import "./mixins/_mixin";
+
+// Import styles
+@import "./pages/back/coreui.scss";
+
+// If you want to add something do it here
+@import "./pages/back/backpage";
+.app {
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  >.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark, 1);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font(1);
+    h1 {
+      @include font(5);
+    }
+    button {
+      @include baseBtn;
+      margin: 10px;
+    }
+    >div {
+      @include font(1);
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      >div {
+        margin: 5px;
+      }
+    }
+  }
+  .modal{
+    background-color: rgba($fontColorBlack, .8);
+    &.open{
+      display: block;
+    }
+  }
+  .modal-dialog {
+    @include positionCenter;
+    width: 500px;
+  }
+  .form-control {
+    border-color: $dark;
+  }
+}
